@@ -1,0 +1,33 @@
+title = "Digital Virtues GmbH"
+copyright = "Digital Virtues GmbH"
+baseURL = "https://digitalvirtues.com"
+languageCode = "en-us"
+theme = "digvirt"
+timeout = "120s"
+
+DefaultContentLanguage = "en"
+DefaultContentLanguageInSubdir = true
+SectionPagesMenu = "main"
+Paginate = 25
+googleAnalytics = ""
+enableRobotsTXT = true
+
+disableKinds = ["taxonomy", "term", "RSS"]
+enableEmoji = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Digital Virtues GmbH"
+    description = "Digital Virtues GmbH"
+    weight = 10
+    contentDir = "content/en"
+    languageCode = "en-us"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[imaging]
+anchor = "smart"
