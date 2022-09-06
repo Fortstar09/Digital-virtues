@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.LanguageCode | default "en" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+        {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+        <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
-    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+        <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
 
-    {{ hugo.Generator }}
+        {{ hugo.Generator }}
 
-    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-      <meta name="robots" content="index, follow">
-    {{ else }}
-      <meta name="robots" content="noindex, nofollow">
-    {{ end }}
+        {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
+        {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+            <meta name="robots" content="index, follow">
+        {{ else }}
+            <meta name="robots" content="noindex, nofollow">
+        {{ end }}
+
+        {{ block "favicon" . }}
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+            <link rel="manifest" href="/site.webmanifest">
+            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+            <meta name="msapplication-TileColor" content="#da532c">
+            <meta name="theme-color" content="#ffffff">
+        {{ end }}
+
+        {{ block "style" . }}
+            <link rel="stylesheet" href="/css/style.css" >
+        {{ end }}
     </head>
     <body>
+
+        {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+
         <main role="main">
             {{ block "main" . }}{{ end }}
-          </main>
-        </body>
-        </html>
+        </main>
+
+        {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+
+        {{ block "script" . }}
+            <script type="text/javascript" src="/js/script.js" defer></script>
+        {{ end }}
+    </body>
+</html>
