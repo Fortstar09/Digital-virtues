@@ -9,6 +9,7 @@ Digital Virtues excels at large scale information retrieval, big data processing
 ## Values
 Our core values are a fair mixture of innovation, pragmatism and enthusiasm. In other words, our projects should be fun, cool and provide value 😉
 
+
 ---
 
 ## The Team    
