@@ -1,7 +1,7 @@
 title = "Digital Virtues GmbH"
 copyright = "Digital Virtues GmbH"
-# baseURL = "https://digitalvirtues.com"
-baseURL = "https://digital-virtues.gitlab.io/digitalvirtues.com"
+baseURL = "https://digitalvirtues.com"
+# baseURL = "https://digital-virtues.gitlab.io/digitalvirtues.com"
 canonifyURLs = true
 relativeURLs = false
 languageCode = "en-us"
