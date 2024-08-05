@@ -1,9 +1,3 @@
-<script>
-    import { page } from '$app/stores';
-    $: console.log($page.params);
-
-</script>
-
 <svelte:head>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -27,6 +21,6 @@
 
 <footer>
     Copyright © 2024 Digital Virtues.
-    <a href="/{ $page.params.lang || 'en' }/privacy-policy/">Privacy Policy</a>
-    <a href="/{ $page.params.lang || 'en' }/legal-notice/">Legal Notice</a>
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <a href="/legal-notice/">Legal Notice</a>
 </footer>
