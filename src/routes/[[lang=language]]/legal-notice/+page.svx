@@ -1,5 +1,6 @@
 ---
 title: Legal Notice
+description: Legal Notice & Contact Information
 ---
 # Legal Notice
 
