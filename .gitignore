@@ -1,6 +1,6 @@
 .DS_Store
 
-__archive
+/__archive
 
 node_modules
 test-results
@@ -10,6 +10,7 @@ test-results
 .vercel
 /.svelte-kit
 /build
+/public
 
 # OS
 .DS_Store
