@@ -1,6 +1,7 @@
 ---
 title: Legal Notice
 description: Digital Virtues GmbH Legal Notice & Contact Information
+layout: page
 ---
 # Legal Notice
 

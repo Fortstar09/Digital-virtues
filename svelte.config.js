@@ -9,7 +9,12 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			layout: 'src/lib/mdsvex/page.svelte',
+			layout: {
+                page: 'src/lib/mdsvex/page.svelte',
+                news: 'src/lib/mdsvex/news.svelte',
+                testimonial: 'src/lib/mdsvex/testimonial.svelte',
+                _: 'src/lib/mdsvex/fallback.svelte'
+            },
 			extensions: ['.svelte.md', '.md', '.svx']
 		})
 	],
@@ -26,7 +31,12 @@ const config = {
 			fallback: undefined,
 			precompress: true,
 			strict: true
-		})
+		}),
+        paths: {
+            assets: '',
+            base: '',
+            relative: false
+        }
 	},
 
 	extensions: ['.svelte', '.svelte.md', '.md', '.svx']

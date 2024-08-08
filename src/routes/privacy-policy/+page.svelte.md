@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
 description: Digital Virtues GmbH Privacy Policy
+layout: page
 ---
 # Privacy Policy
 
