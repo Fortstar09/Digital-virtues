@@ -5,3 +5,5 @@
 
 ## Release
 `rm -rf resources public && HUGO_ENV=production hugo --enableGitInfo --printI18nWarnings --printPathWarnings --minify --gc`
+
+This project auto-builds on commit
