@@ -4,42 +4,42 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	preprocess: [
-		vitePreprocess(),
-		mdsvex({
-			layout: {
+    // Consult https://kit.svelte.dev/docs/integrations#preprocessors
+    // for more information about preprocessors
+    preprocess: [
+        vitePreprocess(),
+        mdsvex({
+            layout: {
                 page: 'src/lib/mdsvex/page.svelte',
                 news: 'src/lib/mdsvex/news.svelte',
                 testimonial: 'src/lib/mdsvex/testimonial.svelte',
                 _: 'src/lib/mdsvex/fallback.svelte'
             },
-			extensions: ['.svelte.md', '.md', '.svx']
-		})
-	],
+            extensions: ['.svelte.md', '.md', '.svx']
+        })
+    ],
 
-	kit: {
-		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter({
-			// default options are shown. On some platforms
-			// these options are set automatically — see below
-			pages: 'public',
-			assets: 'public',
-			fallback: undefined,
-			precompress: true,
-			strict: true
-		}),
+    kit: {
+        // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
+        // If your environment is not supported, or you settled on a specific environment, switch out the adapter.
+        // See https://kit.svelte.dev/docs/adapters for more information about adapters.
+        adapter: adapter({
+            // default options are shown. On some platforms
+            // these options are set automatically — see below
+            pages: 'public',
+            assets: 'public',
+            fallback: undefined,
+            precompress: true,
+            strict: true
+        }),
         paths: {
             assets: '',
             base: '',
             relative: false
         }
-	},
+    },
 
-	extensions: ['.svelte', '.svelte.md', '.md', '.svx']
+    extensions: ['.svelte', '.svelte.md', '.md', '.svx']
 };
 
 export default config;

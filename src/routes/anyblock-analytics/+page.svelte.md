@@ -3,6 +3,7 @@ title: Anyblock Analytics GmbH
 description: Anyblock Analytics GmbH is a crypto and big data company
 layout: page
 ---
+
 # Blockdaemon Acquires Anyblock Analytics
 
 Blockdaemon, the leading provider of blockchain node infrastructure, announced its acquisition of Anyblock Analytics, a prominent crypto analytics company. This strategic move combines the strengths of both companies to enhance blockchain data services for their clients.

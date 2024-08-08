@@ -3,6 +3,7 @@ title: Legal Notice
 description: Digital Virtues GmbH Legal Notice & Contact Information
 layout: page
 ---
+
 # Legal Notice
 
 People responsible for the content in accordance with Article 55, Paragraph 2 of the Interstate Broadcasting Treaty (RStV) and Article 5 of the German Telemedia Act (TMG)

@@ -4,9 +4,9 @@
 
 ### Prerequisites
 
-- Install [Node Version Manager](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
-- Install recent Node version: `nvm install v20.16.0`
-- Install dependencies: `npm install`
+-   Install [Node Version Manager](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+-   Install recent Node version: `nvm install v20.16.0`
+-   Install dependencies: `npm install`
 
 ### Start Development Server
 
