@@ -1,4 +1,9 @@
 <script>
+    import Person from '$lib/components/Person.svelte';
+
+    import imagePeter from '$lib/assets/img/peter-eulberg.jpg?enhanced&w=2048;1920;1280;1024;768;640;512;256';
+    import imageSascha from '$lib/assets/img/sascha-goebel.jpg?enhanced&w=2048;1920;1280;1024;768;640;512;256';
+
     import { base } from '$app/paths';
     export let data;
 </script>
@@ -61,14 +66,24 @@
 
 <section id="team">
     <h2>Team</h2>
-    <div class="person">
-        Peter Eulberg
-        <enhanced:img src="/static/img/kitten.jpg?grayscale" alt="A kitten" class="kitten" />
-    </div>
-    <div class="person">
-        Sascha Göbel
-        <enhanced:img src="/static/img/kitten.jpg?grayscale" alt="A kitten" class="kitten" />
-    </div>
+    <Person
+        firstName="Peter"
+        lastName="Eulberg"
+        description="Peter Eulberg is a leading investment, consulting, and project management firm specializing in innovative digital solutions and strategic business growth."
+        role="CEO"
+        img={imagePeter}
+        homepage="https://eulberg.info/"
+        linkedin="https://www.linkedin.com/in/eulberg/"
+    />
+    <Person
+        firstName="Sascha"
+        lastName="Göbel"
+        description="Sascha Göbel is a leading investment, consulting, and project management firm specializing in innovative digital solutions and strategic business growth."
+        role="CTO"
+        img={imageSascha}
+        homepage="https://www.saschagoebel.com/"
+        linkedin="https://www.linkedin.com/in/saschagoebel/"
+    />
 </section>
 
 <section id="testimonials">
