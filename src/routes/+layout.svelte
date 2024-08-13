@@ -1,5 +1,6 @@
 <script lang="ts">
     import { base } from '$app/paths';
+    import '$lib/styles/layout.scss';
 </script>
 
 <svelte:head>

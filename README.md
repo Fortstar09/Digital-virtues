@@ -26,5 +26,3 @@ Just commit your changes, GitLab automation will take care of everything.
 # TODO:
 
 - https://rodneylab.com/sveltekit-seo/#twitter-cards
-- https://svelte.dev/docs/special-elements#svelte-component
-- https://joshcollinsworth.com/blog/build-static-sveltekit-markdown-blog#add-autoprefixer-with-postcss

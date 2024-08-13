@@ -2,6 +2,9 @@ import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 // import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { sveltePreprocess } from 'svelte-preprocess';
+import autoprefixer from 'autoprefixer';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,6 +13,9 @@ const config = {
     preprocess: [
         sveltePreprocess({
             replace: [[/process\.env\.NODE_ENV/g, JSON.stringify(process.env.NODE_ENV)]],
+            postcss: {
+				plugins: [autoprefixer]
+			}
         }),
         mdsvex({
             layout: {
@@ -18,7 +24,8 @@ const config = {
                 testimonial: 'src/lib/mdsvex/testimonial.svelte',
                 _: 'src/lib/mdsvex/fallback.svelte'
             },
-            extensions: ['.svelte.md', '.md', '.svx']
+            extensions: ['.svelte.md', '.md', '.svx'],
+            rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
         })
     ],
 
