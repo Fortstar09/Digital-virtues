@@ -29,8 +29,16 @@
             src={img}
             sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 512px"
             alt="Photo of {firstName} {lastName}"
+            class="photo"
         />
     {/if}
     <a href={homepage}>Homepage</a>
     <a href={linkedin}>LinkedIn</a>
 </div>
+
+<style lang="scss">
+    .person .photo {
+        width: 256px;
+        height: auto;
+    }
+</style>

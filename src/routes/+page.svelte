@@ -107,10 +107,3 @@
 <section id="contact">
     <h2>Contact</h2>
 </section>
-
-<style>
-    .kitten {
-        width: 250px;
-        height: auto;
-    }
-</style>
