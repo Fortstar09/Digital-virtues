@@ -1,9 +1,6 @@
 <script>
     import Person from '$lib/components/Person.svelte';
 
-    import imagePeter from '$lib/assets/img/peter-eulberg.jpg?enhanced&w=2048;1920;1280;1024;768;640;512;256';
-    import imageSascha from '$lib/assets/img/sascha-goebel.jpg?enhanced&w=2048;1920;1280;1024;768;640;512;256';
-
     import { base } from '$app/paths';
     export let data;
 </script>
@@ -69,18 +66,22 @@
     <Person
         firstName="Peter"
         lastName="Eulberg"
-        description="Peter Eulberg is a leading investment, consulting, and project management firm specializing in innovative digital solutions and strategic business growth."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at elit eget est elementum auctor. Ut bibendum consequat odio, sit."
         role="CEO"
-        img={imagePeter}
+        company="Digital Virtues GmbH"
+        companyUrl="https://digitalvirtues.com/"
+        img="peter-eulberg.jpg"
         homepage="https://eulberg.info/"
         linkedin="https://www.linkedin.com/in/eulberg/"
     />
     <Person
         firstName="Sascha"
         lastName="Göbel"
-        description="Sascha Göbel is a leading investment, consulting, and project management firm specializing in innovative digital solutions and strategic business growth."
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien augue. Pellentesque pharetra massa purus, vel fringilla massa sagittis."
         role="CTO"
-        img={imageSascha}
+        company="Digital Virtues GmbH"
+        companyUrl="https://digitalvirtues.com/"
+        img="sascha-goebel.jpg"
         homepage="https://www.saschagoebel.com/"
         linkedin="https://www.linkedin.com/in/saschagoebel/"
     />
@@ -89,17 +90,18 @@
 <section id="testimonials">
     <h2>Testimonials</h2>
     {#each data.testimonials as testimonial}
-        <div class="testimonial" id="testimonial-{testimonial.slug}">
-            <svelte:component this={testimonial.default} />
-        </div>
+        <svelte:component this={testimonial.default} id="testimonial-{testimonial.slug}" />
     {/each}
 </section>
 
 <section id="news">
     <h2>News / Timeline</h2>
     {#each data.news as news}
-        <div class="news-item" id="news-item-{news.slug}">
-            <svelte:component this={news.default} />
+        <div class="timeline-year">
+            <h3>{news[0]}</h3>
+            {#each news[1] as item}
+                <svelte:component this={item.default} id="news-item-{item.slug}" />
+            {/each}
         </div>
     {/each}
 </section>

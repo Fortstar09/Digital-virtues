@@ -5,6 +5,7 @@ import { sveltePreprocess } from 'svelte-preprocess';
 import autoprefixer from 'autoprefixer';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import preview, { textFormatter } from 'remark-preview';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -14,8 +15,8 @@ const config = {
         sveltePreprocess({
             replace: [[/process\.env\.NODE_ENV/g, JSON.stringify(process.env.NODE_ENV)]],
             postcss: {
-				plugins: [autoprefixer]
-			}
+                plugins: [autoprefixer]
+            }
         }),
         mdsvex({
             layout: {
@@ -25,7 +26,13 @@ const config = {
                 _: 'src/lib/mdsvex/fallback.svelte'
             },
             extensions: ['.svelte.md', '.md', '.svx'],
-            rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
+            rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+            remarkPlugins: [
+                preview(textFormatter({ length: 250, maxBlocks: 2 })),
+                preview(textFormatter({}), {
+                    attribute: 'textContent'
+                })
+            ]
         })
     ],
 

@@ -10,5 +10,5 @@ export async function loadContent(
             ...item
         } as App.MdsvexFile;
     });
-    return await Promise.all(promises);
+    return (await Promise.all(promises)).sort((a, b) => (a.slug || '').localeCompare(b.slug || ''));
 }

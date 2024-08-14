@@ -32,6 +32,7 @@
         "prettier-plugin-svelte": "^3.1.2",
         "rehype-autolink-headings": "7.1.0",
         "rehype-slug": "6.0.0",
+        "remark-preview": "1.0.2",
         "rollup-plugin-visualizer": "5.12.0",
         "sass": "1.77.8",
         "super-sitemap": "0.15.0",

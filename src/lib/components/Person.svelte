@@ -1,32 +1,38 @@
-<script>
+<script lang="ts">
+    import { loadImageModule } from '$lib/loadImageModule';
+    import JsonLd from '$lib/components/JSON-LD.svelte';
+
     export let firstName;
     export let lastName;
     export let description;
     export let role;
+    export let company;
+    export let companyUrl;
     export let img;
     export let homepage;
     export let linkedin;
 
-    let jsonLd = {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "familyName": lastName,
-        "givenName": firstName,
-        "name": `${firstName} ${lastName}`,
-        "jobTitle": role,
-        "url": homepage,
-        "image": img.img.src
-    };
+    const loadedImage = loadImageModule(img);
 </script>
 
-{@html '<script type="application/ld+json">'+ JSON.stringify(jsonLd) + '</script>'}
+<JsonLd
+    type="Person"
+    data={{
+        familyName: lastName,
+        givenName: firstName,
+        name: `${firstName} ${lastName}`,
+        jobTitle: role,
+        url: homepage,
+        image: loadedImage?.img.src
+    }}
+/>
 
 <div class="person">
-    <h3>{firstName} {lastName}, {role}</h3>
+    <h3>{firstName} {lastName}, {role} <a href={companyUrl}>{company}</a></h3>
     <p>{description}</p>
-    {#if img}
+    {#if loadedImage}
         <enhanced:img
-            src={img}
+            src={loadedImage}
             sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 512px"
             alt="Photo of {firstName} {lastName}"
             class="photo"
