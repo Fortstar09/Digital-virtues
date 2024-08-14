@@ -15,15 +15,15 @@ export async function load() {
         >
     );
 
-    const sortedNews: Record<string, App.MdsvexFile[]> = {}
+    const sortedNews: Record<string, App.MdsvexFile[]> = {};
 
     for (const item of news.reverse()) {
-        const date = new Date(item.metadata.date)
-        const year = date.getFullYear() as unknown as string
+        const date = new Date(item.metadata.date);
+        const year = date.getFullYear() as unknown as string;
         if (!sortedNews[year]) {
-            sortedNews[year] = []
+            sortedNews[year] = [];
         }
-        sortedNews[year].push(item)
+        sortedNews[year].push(item);
     }
 
     return {

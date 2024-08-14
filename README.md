@@ -25,9 +25,9 @@ Just commit your changes, GitLab automation will take care of everything.
 
 ## TODO
 
-- https://rodneylab.com/sveltekit-seo/#twitter-cards
-- Create reusable Digital Virtues Organization Object
-  - https://schema.org/Organization
-- Test & Refine Rich Microdata
-  - https://search.google.com/test/rich-results
-  - https://validator.schema.org/
+-   https://rodneylab.com/sveltekit-seo/#twitter-cards
+-   Create reusable Digital Virtues Organization Object
+    -   https://schema.org/Organization
+-   Test & Refine Rich Microdata
+    -   https://search.google.com/test/rich-results
+    -   https://validator.schema.org/

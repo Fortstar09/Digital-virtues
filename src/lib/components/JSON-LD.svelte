@@ -1,12 +1,13 @@
 <script lang="ts">
-    export let type = 'Person'
-    export let data = {}
+    export let type = 'Person';
+    export let data = {};
 
-    const jsonLd = {
-        "@context": "https://schema.org",
-        "@type": type,
+    const jsonLd = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': type,
         ...data
-    }
+    });
 </script>
 
-{@html '<script type="application/ld+json">'+ JSON.stringify(jsonLd) + '</script>'}
+<!-- eslint-disable-next-line svelte/no-at-html-tags, @typescript-eslint/no-unused-expressions -->
+{@html '<script type="application/ld+json">' + jsonLd + '</script>'}

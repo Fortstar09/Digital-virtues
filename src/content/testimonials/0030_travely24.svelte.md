@@ -7,4 +7,5 @@ url: https://travely24.com
 img: testimonial/travely.jpg
 layout: testimonial
 ---
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod arcu sed euismod gravida. Fusce in justo eros. Nunc semper diam quis dignissim tincidunt. Nam quis venenatis ex. Cras sit amet nunc et elit ultricies mollis sit amet in dui.

@@ -1,18 +1,17 @@
 <script lang="ts">
-
-    import { loadImageModule } from "$lib/loadImageModule";
+    import { loadImageModule } from '$lib/loadImageModule';
     import JsonLd from '$lib/components/JSON-LD.svelte';
 
-    export let date
-    export let author
-    export let role
-    export let company
-    export let url
-    export let img
-    export let id
-    export let textContent
+    export let date;
+    export let author;
+    export let role;
+    export let company;
+    export let url;
+    export let img;
+    export let id;
+    export let textContent;
 
-    const loadedImage = loadImageModule(img)
+    const loadedImage = loadImageModule(img);
 </script>
 
 <JsonLd
@@ -39,7 +38,7 @@
     <figcaption>
         {#if loadedImage}
             <enhanced:img src={loadedImage} alt="Picture of {author}" />
-            {/if}
-        {author}, {role} at <a href="{url}">{company}</a>
+        {/if}
+        {author}, {role} at <a href={url}>{company}</a>
     </figcaption>
 </figure>
