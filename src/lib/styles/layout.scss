@@ -146,7 +146,8 @@ section#mission {
     }
 }
 
-section#team, section#references {
+section#team,
+section#references {
     .photo {
         width: 20rem;
         height: auto;
@@ -184,7 +185,7 @@ section#timeline {
     }
 
     .container::after {
-        content: "";
+        content: '';
         clear: both;
         display: table;
     }
