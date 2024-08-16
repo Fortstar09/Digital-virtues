@@ -20,13 +20,17 @@
 </svelte:head>
 
 <header>
-    <div><a href="{base}/">Digital Virtues GmbH</a></div>
-    <a href="{base}/#about">About</a>
-    <a href="{base}/#pillars">Pillars</a>
-    <a href="{base}/#team">Team</a>
-    <a href="{base}/#testimonials">Testimonials</a>
-    <a href="{base}/#news">News</a>
-    <a href="{base}/#contact">Contact</a>
+    <nav class="container">
+        <a href="{base}/" class="brand">Digital Virtues GmbH</a>
+        <ul role="list">
+            <li><a href="{base}/#mission">Mission</a></li>
+            <li><a href="{base}/#vision">Vision</a></li>
+            <li><a href="{base}/#values">Values</a></li>
+            <li><a href="{base}/#team">Team</a></li>
+            <li><a href="{base}/#references">References</a></li>
+            <li><a href="{base}/#timeline">Timeline</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
@@ -34,31 +38,42 @@
 </main>
 
 <footer>
-    <p>Copyright &#169; {new Date().getFullYear()} <a href="{base}/">Digital Virtues GmbH</a></p>
-    <div class="legal">
-        <a href="{base}/privacy-policy/">Privacy Policy</a>
-        <a href="{base}/legal-notice/">Legal Notice</a>
-        <a href="{base}/#contact">Contact</a>
-    </div>
-    <div class="social">
-        <a href="{base}/">Twitter / X</a>
-        <a href="{base}/">LinkedIn</a>
-        <a href="{base}/">Instagram</a>
-        <a href="{base}/">Facebook</a>
-        <a href="{base}/">TikTok</a>
-        <a href="{base}/">YouTube</a>
-        <a href="{base}/">Discord</a>
-        <a href="{base}/">Telegram</a>
-        <a href="{base}/">Matrix</a>
-        <a href="{base}/">Mastodon</a>
-    </div>
-    <div class="project">
-        <a href="{base}/">Proxy Manager</a>
-        <a href="{base}/">Traffic Broker</a>
-        <a href="{base}/">Knowledge Collector</a>
-        <a href="{base}/">Creator Cartel</a>
-        <a href="{base}/">Trading AI</a>
-        <a href="{base}/">Lichtmatrosen</a>
-        <a href="{base}/">Peach & Lime</a>
+    <div class="container">
+        <div class="legal">
+            <h2>Copyright &#169; {new Date().getFullYear()}
+                <a href="{base}/">Digital Virtues GmbH</a></h2>
+            <ul role="list">
+                <li><a href="mailto:contact@digitalvirtues.com">contact@digitalvirtues.com</a></li>
+                <li><a href="{base}/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="{base}/legal-notice/">Legal Notice</a></li>
+            </ul>
+        </div>
+        <div class="social">
+            <h2>Socials</h2>
+            <ul>
+            <li><a href="{base}/">Twitter / X</a></li>
+            <li><a href="{base}/">LinkedIn</a></li>
+            <li><a href="{base}/">Instagram</a></li>
+            <li><a href="{base}/">Facebook</a></li>
+            <li><a href="{base}/">TikTok</a></li>
+            <li><a href="{base}/">YouTube</a></li>
+            <li><a href="{base}/">Discord</a></li>
+            <li><a href="{base}/">Telegram</a></li>
+            <li><a href="{base}/">Matrix</a></li>
+            <li><a href="{base}/">Mastodon</a></li>
+        </ul>
+        </div>
+        <div class="project">
+            <h2>Projects</h2>
+            <ul>
+            <li><a href="{base}/">Proxy Manager</a></li>
+            <li><a href="{base}/">Traffic Broker</a></li>
+            <li><a href="{base}/">Knowledge Collector</a></li>
+            <li><a href="{base}/">Creator Cartel</a></li>
+            <li><a href="{base}/">Trading AI</a></li>
+            <li><a href="{base}/">Lichtmatrosen</a></li>
+            <li><a href="{base}/">Peach & Lime</a></li>
+        </ul>
+        </div>
     </div>
 </footer>

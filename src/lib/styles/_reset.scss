@@ -35,7 +35,8 @@ html:focus-within {
 
 /* Add accessible line-height, Improve text rendering */
 body {
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
 }

@@ -37,7 +37,12 @@
     </blockquote>
     <figcaption>
         {#if loadedImage}
-            <enhanced:img src={loadedImage} alt="Picture of {author}" />
+            <enhanced:img
+                src={loadedImage}
+                sizes="(min-width: 1216px) 50vw, (min-width: 1024px) 80vw, 100vw"
+                alt="Picture of {author}"
+                class="photo"
+            />
         {/if}
         {author}, {role} at <a href={url}>{company}</a>
     </figcaption>

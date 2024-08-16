@@ -33,7 +33,7 @@
     {#if loadedImage}
         <enhanced:img
             src={loadedImage}
-            sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 512px"
+            sizes="(min-width: 1216px) 50vw, (min-width: 1024px) 80vw, 100vw"
             alt="Photo of {firstName} {lastName}"
             class="photo"
         />
@@ -41,10 +41,3 @@
     <a href={homepage}>Homepage</a>
     <a href={linkedin}>LinkedIn</a>
 </div>
-
-<style lang="scss">
-    .person .photo {
-        width: 256px;
-        height: auto;
-    }
-</style>

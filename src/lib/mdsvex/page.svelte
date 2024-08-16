@@ -13,4 +13,6 @@
     {/if}
 </svelte:head>
 
-<slot />
+<section class="container">
+    <slot />
+</section>
