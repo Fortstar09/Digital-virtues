@@ -9,9 +9,7 @@
     <div class="container">
         <h2>
             <blockquote>
-                Digital Virtues GmbH is on a thrilling mission to revolutionize the world,
-                harnessing cutting-edge technology to create a brighter, smarter, and more connected
-                future for all.
+                We build, operate and invest in digital revenue models with an emphasis on crypto and big data.
             </blockquote>
         </h2>
     </div>
@@ -19,44 +17,59 @@
 
 <section id="vision">
     <div class="container">
-        <h2>Vision</h2>
+        <h2>Mission</h2>
         <ul>
-            <li>DV investiert in Menschen und Ideen</li>
-            <li>DV baut und betreibt Software</li>
-            <li>
-                DV berät einzelne Personen und Unternehmen
-                <ul>
-                    <li>Bspw. Mentoring</li>
-                    <li>IT- Prozessberatung</li>
-                </ul>
-            </li>
+            <li>We invest in people and ideas</li>
+            <li>We build and operate software</li>
+            <li>We maintain long term personal relationships</li>
+            <li></li>
+            <li>Digital Virtues represents our passion.</li>
         </ul>
 
         <h2>Pillars</h2>
         <div class="pillars">
             <div class="pillar pillar-invest">
-                <h3>Venture Capital / Business Angel Aktivitäten</h3>
+                <h3>Venture Capital / Business Angel Activities</h3>
                 <ul>
                     <li>
-                        Wir investieren in starke Gründerteams mit besonderen Fähigkeiten und
-                        Knowhow, fähig sich ändernden Situationen anzupassen
+                        We invest in strong founder teams with exceptional know how and skills that 
+                        are able to adapt to changing challenges
                     </li>
                     <li>
-                        Das Startup hat einen einzigartigen Blickwinkel auf seinen Markt oder gar
-                        einen sehr guten Marktzugang
+                        Our investments have superb access or at least a unique angle into their markets
                     </li>
                     <li>
-                        Wir engagieren uns gerne auch hands-on, oft intensive Beratung 1-2x im
-                        Monat, nicht nur reporting, sehr individuell
+                        We love to engange on a personal level and very hands-on. 
+                        Depending on the individual preferences and needs of the founders we often have 1-2 calls a month 
+                        and at least one yearly workshop. We are providing real value i.e. 
+                        increasing efficiency and effectiveness significantly as well as adding raw productivity output 
+                        if needed.
                     </li>
                 </ul>
             </div>
             <div class="pillar pillar-consult">
-                <h3>Beratung</h3>
-                Projekt, Persönlich & Software
+                <h3>Consulting</h3>
+                <p>Our consulting activities are very diverse reflecting our personal expertise and experiences.
+                They are mainly centered around personal, business and strategic development. Lately we cover mostly 
+                entrepreneural topics like scoping, sales and HR as well as specific questions 
+                in crypto, software or infrastructre projects.</p> 
+                Following a few examples:
+                <ul>
+                    <li>Mentoring of students and (future) founders</li>
+                    <li>Supporting entrepreneurs and startup teams on a monthly basis regarding prioritization, 
+                        growth, HR and a wide range of other questions and needs as they arise.
+                    </li>
+                    <li>IT- process design and advisory</li>
+                    <li>Information technology consulting, i.e. make or buy, decision support regarding software 
+                        and implementation options, design and implementation of architecture and infrastructure, ...
+                    </li>
+                    <li>As certified project managers we support our customers and partners in any aspect of project and 
+                        portfolio management.
+                    </li>
+                </ul>
             </div>
             <div class="pillar pillar-project">
-                <h3>Projects</h3>
+                <h3>Projects, Activities & Interests</h3>
                 <ul>
                     <li>(Media Services)</li>
                     <li>(Lichtmatrosen)</li>
