@@ -146,6 +146,14 @@ section#mission {
     }
 }
 
+section#vision {
+    .pillars {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
 section#team,
 section#references {
     .photo {

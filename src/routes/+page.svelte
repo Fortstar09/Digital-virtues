@@ -31,41 +31,42 @@
                 </ul>
             </li>
         </ul>
-    </div>
-</section>
 
-<section id="pillars">
-    <div class="container">
         <h2>Pillars</h2>
-        <div class="pillar pillar-invest">
-            Venture Capital / Business Angel Aktivitäten
-            <ul>
-                <li>
-                    Wir investieren in starke Gründerteams mit besonderen Fähigkeiten und Knowhow,
-                    fähig sich ändernden Situationen anzupassen
-                </li>
-                <li>
-                    Das Startup hat einen einzigartigen Blickwinkel auf seinen Markt oder gar einen
-                    sehr guten Marktzugang
-                </li>
-                <li>
-                    Wir engagieren uns gerne auch hands-on, oft intensive Beratung 1-2x im Monat,
-                    nicht nur reporting, sehr individuell
-                </li>
-            </ul>
-        </div>
-        <div class="pillar pillar-consult">Beratung Projekt, Persönlich & Software</div>
-        <div class="pillar pillar-project">
-            Projects
-            <ul>
-                <li>(Media Services)</li>
-                <li>(Lichtmatrosen)</li>
-                <li>(Peach & Lime)</li>
-                <li>Software / SaaS</li>
-                <li>Proxy</li>
-                <li>Knowledge Extension</li>
-                <li><a href="{base}/anyblock-analytics/">Anyblock Analytics GmbH</a></li>
-            </ul>
+        <div class="pillars">
+            <div class="pillar pillar-invest">
+                <h3>Venture Capital / Business Angel Aktivitäten</h3>
+                <ul>
+                    <li>
+                        Wir investieren in starke Gründerteams mit besonderen Fähigkeiten und
+                        Knowhow, fähig sich ändernden Situationen anzupassen
+                    </li>
+                    <li>
+                        Das Startup hat einen einzigartigen Blickwinkel auf seinen Markt oder gar
+                        einen sehr guten Marktzugang
+                    </li>
+                    <li>
+                        Wir engagieren uns gerne auch hands-on, oft intensive Beratung 1-2x im
+                        Monat, nicht nur reporting, sehr individuell
+                    </li>
+                </ul>
+            </div>
+            <div class="pillar pillar-consult">
+                <h3>Beratung</h3>
+                Projekt, Persönlich & Software
+            </div>
+            <div class="pillar pillar-project">
+                <h3>Projects</h3>
+                <ul>
+                    <li>(Media Services)</li>
+                    <li>(Lichtmatrosen)</li>
+                    <li>(Peach & Lime)</li>
+                    <li>Software / SaaS</li>
+                    <li>Proxy</li>
+                    <li>Knowledge Extension</li>
+                    <li><a href="{base}/anyblock-analytics/">Anyblock Analytics GmbH</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
