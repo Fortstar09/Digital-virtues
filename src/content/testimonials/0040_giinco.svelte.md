@@ -8,4 +8,4 @@ img: testimonial/giinco.jpg
 layout: testimonial
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur erat eget ullamcorper venenatis. Mauris condimentum eget eros ut eleifend. Nullam placerat felis sit amet leo blandit congue. Etiam vel dolor at metus accumsan posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis consequat nulla. Nulla congue felis a tristique dignissim. Nullam commodo tincidunt massa eget sagittis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus id pretium ligula.
+For more than 10 years, Digital Virtues has been supporting us in numerous projects for a wide variety of clients. We have always perceived their consistently well-founded and profound assessments and recommendations as highly valuable, competent, and completely independent. The consultants don't mince their words. The consultation usually goes beyond what one expects and reveals new perspectives and ways of thinking. We look forward to tackling new projects together.
