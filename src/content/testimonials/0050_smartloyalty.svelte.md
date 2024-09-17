@@ -8,4 +8,4 @@ img: testimonial/smartloyalty.jpg
 layout: testimonial
 ---
 
-Herr Peter Eulberg berät die Smartloyalty AG seid über xx Jahren. Für mich als CEO ist dabei von großem Nutzen das ich neben aktuellen Entwicklungen auch immer eine zweite externe Meinung – zu unterschiedlichsten Themengebieten - bekomme.  Durch seine gradlinige Art bekomme ich dabei ein ungetrübtes Bild zu den Anforderungen und Möglichkeiten der Digitalisierung.  
+Peter Eulberg has been advising Smartloyalty AG for over 12 years. As CEO, I greatly value having an external perspective alongside current developments, as he provides valuable insights on a wide range of topics. Thanks to his straightforward manner, I get an unclouded picture of the requirements and possibilities of digitalization.
