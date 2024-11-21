@@ -25,6 +25,7 @@ Just commit your changes, GitLab automation will take care of everything.
 
 ## TODO
 
+- https://www.youtube.com/watch?v=eWmDW4zEXt4
 -   https://rodneylab.com/sveltekit-seo/#twitter-cards
 -   Create reusable Digital Virtues Organization Object
     -   https://schema.org/Organization

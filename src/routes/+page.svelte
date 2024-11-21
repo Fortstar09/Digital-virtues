@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
     import Person from '$lib/components/Person.svelte';
 
     import { base } from '$app/paths';
-    export let data;
+    let { data } = $props();
 </script>
 
 <section id="mission">
@@ -127,7 +127,7 @@
     <div class="container">
         <h2>Testimonials</h2>
         {#each data.testimonials as testimonial}
-            <svelte:component this={testimonial.default} id="testimonial-{testimonial.slug}" />
+            <testimonial.default id="testimonial-{testimonial.slug}" />
         {/each}
     </div>
 </section>
@@ -139,7 +139,7 @@
             <div class="timeline-year">
                 <h3>{news[0]}</h3>
                 {#each news[1] as item}
-                    <svelte:component this={item.default} id="news-item-{item.slug}" />
+                    <item.default id="news-item-{item.slug}" />
                 {/each}
             </div>
         {/each}

@@ -1,10 +1,13 @@
 <script lang="ts">
     import JsonLd from '$lib/components/JSON-LD.svelte';
 
-    export let date;
-    export let tags;
-    export let id;
-    export let textContent;
+    let {
+        date,
+        tags,
+        id,
+        textContent,
+        children
+    } = $props();
 </script>
 
 <JsonLd
@@ -26,7 +29,7 @@
 
 <div class="timeline-item" {id}>
     {new Date(date).toISOString().slice(0, 10)}
-    <slot />
+    {@render children?.()}
     Tags: {tags
         ?.split(',')
         .map((e) => e.trim())

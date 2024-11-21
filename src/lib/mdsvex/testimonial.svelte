@@ -2,14 +2,17 @@
     import { loadImageModule } from '$lib/loadImageModule';
     import JsonLd from '$lib/components/JSON-LD.svelte';
 
-    export let date;
-    export let author;
-    export let role;
-    export let company;
-    export let url;
-    export let img;
-    export let id;
-    export let textContent;
+    let {
+        date,
+        author,
+        role,
+        company,
+        url,
+        img,
+        id,
+        textContent,
+        children
+    } = $props();
 
     const loadedImage = loadImageModule(img);
 </script>
@@ -33,7 +36,7 @@
 
 <figure class="testimonial" {id}>
     <blockquote>
-        <slot />
+        {@render children?.()}
     </blockquote>
     <figcaption>
         {#if loadedImage}

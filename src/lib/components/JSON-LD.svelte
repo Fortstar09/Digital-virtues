@@ -1,6 +1,10 @@
 <script lang="ts">
-    export let type = 'Person';
-    export let data = {};
+    interface Props {
+        type?: string;
+        data?: any;
+    }
+
+    let { type = 'Person', data = {} }: Props = $props();
 
     const jsonLd = JSON.stringify({
         '@context': 'https://schema.org',
