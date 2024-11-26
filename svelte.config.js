@@ -39,7 +39,7 @@ const config = {
             assets: 'public',
             fallback: undefined,
             precompress: true,
-            strict: true
+            strict: true,
         }),
         paths: {
             assets: '',

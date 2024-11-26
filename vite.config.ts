@@ -17,6 +17,16 @@ export default defineConfig({
         include: ['src/**/*.{test,spec}.{js,ts}']
     },
     build: {
-        minify: 'terser'
-    }
+        minify: 'terser',
+        cssMinify: true,
+        terserOptions: {
+            format: {
+                comments: false,
+                indent_level: 2
+            },
+            compress: {
+                passes: 2,
+            },
+        }
+    },
 });
