@@ -7,8 +7,8 @@ People responsible for the content in accordance with Article 55, Paragraph 2 of
 
 Peter Eulberg & Sascha Göbel  
 Digital Virtues GmbH  
-Jugenheimer Str. 19
-55270 Engelstadt
+Jugenheimer Str. 19   
+55270 Engelstadt   
 Germany
 
 ## Contact
