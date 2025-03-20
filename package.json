@@ -15,6 +15,7 @@
         "test:unit": "vitest"
     },
     "devDependencies": {
+        "@fontsource-variable/comfortaa": "5.1.0",
         "@playwright/test": "1.49.0",
         "@sveltejs/adapter-static": "3.0.6",
         "@sveltejs/enhanced-img": "0.4.1",

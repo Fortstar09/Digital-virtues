@@ -32,17 +32,17 @@
                 <h3>Venture Capital / Business Angel Activities</h3>
                 <ul>
                     <li>
-                        We invest in strong founder teams with exceptional know how and skills that 
+                        We invest in strong founder teams with exceptional know how and skills that
                         are able to adapt to changing challenges
                     </li>
                     <li>
                         Our investments have superb access or at least a unique angle into their markets
                     </li>
                     <li>
-                        We love to engange on a personal level and very hands-on. 
-                        Depending on the individual preferences and needs of the founders we often have 1-2 calls a month 
-                        and at least one yearly workshop. We are providing real value i.e. 
-                        increasing efficiency and effectiveness significantly as well as adding raw productivity output 
+                        We love to engange on a personal level and very hands-on.
+                        Depending on the individual preferences and needs of the founders we often have 1-2 calls a month
+                        and at least one yearly workshop. We are providing real value i.e.
+                        increasing efficiency and effectiveness significantly as well as adding raw productivity output
                         if needed.
                     </li>
                 </ul>
@@ -50,20 +50,20 @@
             <div class="pillar pillar-consult">
                 <h3>Consulting</h3>
                 <p>Our consulting activities are very diverse reflecting our personal expertise and experiences.
-                They are mainly centered around personal, business and strategic development. Lately we cover mostly 
-                entrepreneural topics like scoping, sales and HR as well as specific questions 
-                in crypto, software or infrastructre projects.</p> 
+                They are mainly centered around personal, business and strategic development. Lately we cover mostly
+                entrepreneural topics like scoping, sales and HR as well as specific questions
+                in crypto, software or infrastructre projects.</p>
                 Following a few examples:
                 <ul>
                     <li>Mentoring of students and (future) founders</li>
-                    <li>Supporting entrepreneurs and startup teams on a monthly basis regarding prioritization, 
+                    <li>Supporting entrepreneurs and startup teams on a monthly basis regarding prioritization,
                         growth, HR and a wide range of other questions and needs as they arise.
                     </li>
                     <li>IT- process design and advisory</li>
-                    <li>Information technology consulting, i.e. make or buy, decision support regarding software 
+                    <li>Information technology consulting, i.e. make or buy, decision support regarding software
                         and implementation options, design and implementation of architecture and infrastructure, ...
                     </li>
-                    <li>As certified project managers we support our customers and partners in any aspect of project and 
+                    <li>As certified project managers we support our customers and partners in any aspect of project and
                         portfolio management.
                     </li>
                 </ul>
@@ -101,7 +101,7 @@
         <Person
             firstName="Peter"
             lastName="Eulberg"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at elit eget est elementum auctor. Ut bibendum consequat odio, sit."
+            description="Successful blockchain startup founder with executive leadership experience, specializing in organizational development, portfolio management, and expertise spanning entrepreneurship, web3, technology, and business process analysis."
             role="CEO"
             company="Digital Virtues GmbH"
             companyUrl="https://digitalvirtues.com/"
@@ -112,7 +112,7 @@
         <Person
             firstName="Sascha"
             lastName="Göbel"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non sapien augue. Pellentesque pharetra massa purus, vel fringilla massa sagittis."
+            description="Data Wrangler, AI Whisperer, Code Monkey, Investor, Serial Entrepreneur, Helpdesk, Meme Connoisseur. I do stuff with computers."
             role="CTO"
             company="Digital Virtues GmbH"
             companyUrl="https://digitalvirtues.com/"

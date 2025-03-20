@@ -1,6 +1,9 @@
 <script lang="ts">
     import { base } from '$app/paths';
     import '$lib/styles/layout.scss';
+    // import LogoURL from '$lib/assets/logo-dv.svg';
+    import LogoRAW from '$lib/assets/logo-dv.svg?raw';
+
     interface Props {
         children?: import('svelte').Snippet;
     }
@@ -26,7 +29,10 @@
 
 <header>
     <nav class="container">
-        <a href="{base}/" class="brand">Digital Virtues GmbH</a>
+        <a href="{base}/" class="brand">
+            <!-- <img src={LogoURL} alt="Digital Virtues GmbH" /> -->
+             {@html LogoRAW}
+        </a>
         <ul role="list">
             <li><a href="{base}/#mission">Mission</a></li>
             <li><a href="{base}/#vision">Vision</a></li>

@@ -11,7 +11,7 @@ export default defineConfig({
             filename: 'stats.html'
         }),
         enhancedImages(),
-        sveltekit()
+        sveltekit(),
     ],
     test: {
         include: ['src/**/*.{test,spec}.{js,ts}']

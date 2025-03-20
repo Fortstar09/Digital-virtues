@@ -8,7 +8,7 @@ $breakpoint-mobile: 768px;
 $breakpoint-desktop: 1024px;
 $breakpoint-wide: 1216px;
 
-$font-stack-serif:
+$font-stack-serif-geist:
     Geist,
     system-ui,
     -apple-system,
@@ -24,8 +24,28 @@ $font-stack-serif:
     Arial,
     sans-serif;
 
-$font-stack-mono: 'GeistMono', ui-monospace, 'Fira Code', Menlo, Monaco, 'Cascadia Mono',
+$font-stack-serif-comfortaa:
+    'Comfortaa Variable',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    sans-serif;
+
+$font-stack-serif: $font-stack-serif-comfortaa;
+
+$font-stack-mono-geist: 'GeistMono', ui-monospace, 'Fira Code', Menlo, Monaco, 'Cascadia Mono',
     'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono', 'Ubuntu Mono', 'Source Code Pro', 'Fira Mono',
     'Droid Sans Mono', 'Consolas', 'Courier New', monospace;
+
+$font-stack-mono: $font-stack-mono-geist;
 
 $font-stack: $font-stack-serif;

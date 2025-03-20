@@ -4,7 +4,8 @@ author: Daniel Metzenthin
 role: Chief Legal Officer
 company: Finomet GmbH
 url: https://finomet.de
-img: testimonial/finomet.jpg
+img: testimonial/na.jpg
+status: draft
 layout: testimonial
 ---
 

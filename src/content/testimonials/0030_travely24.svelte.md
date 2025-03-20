@@ -4,7 +4,8 @@ author: Dr. Mikhail Patrushev
 role: Chief Executive Officer
 company: Travely24 GmbH
 url: https://travely24.com
-img: testimonial/travely.jpg
+img: testimonial/na.jpg
+status: draft
 layout: testimonial
 ---
 

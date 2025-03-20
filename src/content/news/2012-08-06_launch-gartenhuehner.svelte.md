@@ -1,6 +1,7 @@
 ---
 date: 2012-08-06
 tags: e-commerce, content-marketing, niche, chicken
+status: published
 layout: news
 ---
 

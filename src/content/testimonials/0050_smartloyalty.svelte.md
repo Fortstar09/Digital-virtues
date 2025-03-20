@@ -5,6 +5,7 @@ role: CEO
 company: SmartLoyalty AG
 url: https://smartloyalty.de
 img: testimonial/smartloyalty.jpg
+status: published
 layout: testimonial
 ---
 

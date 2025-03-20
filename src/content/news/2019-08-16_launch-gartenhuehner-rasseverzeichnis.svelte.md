@@ -1,6 +1,7 @@
 ---
 date: 2019-08-16
 tags: e-commerce, content-marketing, niche, chicken, data
+status: published
 layout: news
 ---
 

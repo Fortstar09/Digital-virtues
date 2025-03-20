@@ -4,7 +4,8 @@ author: Theresa Klingenberg
 role: Chief Executive Officer
 company: Deine Zweisamkeit GmbH
 url: https://deine-zweisamkeit.de
-img: testimonial/zweisamkeit.jpg
+img: testimonial/na.jpg
+status: draft
 layout: testimonial
 ---
 

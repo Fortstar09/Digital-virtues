@@ -4,7 +4,8 @@ author: Norbert Gilles
 role: Managing Director
 company: giinco GmbH
 url: https://giinco.de
-img: testimonial/giinco.jpg
+img: testimonial/na.jpg
+status: published
 layout: testimonial
 ---
 
