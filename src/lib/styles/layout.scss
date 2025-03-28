@@ -1,12 +1,13 @@
 @use 'config';
 @use 'reset';
-// @use 'font-geist-sans';
 @use '@fontsource-variable/comfortaa';
 @use 'font-geist-mono';
 
 body {
     font-family: config.$font-stack-serif;
     font-size: 1rem;
+    line-height: 1.5;
+    color: config.$color-black;
 }
 
 /* Content Container */
@@ -18,7 +19,7 @@ body {
 
 /* Header */
 header {
-    background-color: pink; // config.$color-black;
+    background-color: config.$color-blue-dark;
     color: config.$color-white;
     padding: 2rem 0;
 
@@ -31,12 +32,8 @@ header {
         font-weight: 700;
         text-decoration: none;
 
-        img, svg {
+        img {
             height: 2rem;
-
-            .b {
-                fill: green !important;
-            }
         }
     }
 
@@ -46,14 +43,14 @@ header {
         align-items: center;
         justify-content: center;
 
-        @media (min-width: config.$breakpoint-mobile) {
+        @media (min-width: config.$breakpoint-desktop) {
             justify-content: space-between;
         }
 
         > a {
             margin-bottom: 0.75rem;
 
-            @media (min-width: config.$breakpoint-mobile) {
+            @media (min-width: config.$breakpoint-desktop) {
                 margin-bottom: 0;
             }
         }
@@ -65,7 +62,7 @@ header {
             flex: 1 0 100%;
             justify-content: center;
 
-            @media (min-width: config.$breakpoint-mobile) {
+            @media (min-width: config.$breakpoint-desktop) {
                 flex: 0 1 auto;
             }
 
@@ -82,7 +79,7 @@ header {
 
 /* Footer */
 footer {
-    background-color: config.$color-black;
+    background-color: config.$color-blue-dark;
     color: config.$color-white;
     padding: 2rem 0;
 
@@ -107,6 +104,29 @@ footer {
     }
 }
 
+/* Markdown Content */
+main .content {
+    h1,
+    h2,
+    h3 {
+        margin: 1.5rem 0 1rem 0;
+    }
+    p,
+    ul {
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
+
+    a {
+        text-decoration: underline;
+        color: config.$color-blue-light;
+    }
+}
+
 /* Sections */
 section {
     min-height: 50vh;
@@ -119,94 +139,94 @@ section {
 }
 
 /* Mission Section */
-section#mission {
-    h2 {
-        font-size: 1.75rem;
-        font-weight: 900;
+// section#mission {
+//     h2 {
+//         font-size: 1.75rem;
+//         font-weight: 900;
 
-        @media (min-width: config.$breakpoint-mobile) {
-            font-size: 3rem;
-        }
-    }
+//         @media (min-width: config.$breakpoint-mobile) {
+//             font-size: 3rem;
+//         }
+//     }
 
-    blockquote {
-        position: relative;
-        padding: 1em 3em;
-    }
+//     blockquote {
+//         position: relative;
+//         padding: 1em 3em;
+//     }
 
-    blockquote:before {
-        content: open-quote;
-        font-size: 4em;
-        line-height: 0.1em;
-        opacity: 0.25;
-        position: absolute;
-        left: 0;
-        top: 0.25em;
-    }
+//     blockquote:before {
+//         content: open-quote;
+//         font-size: 4em;
+//         line-height: 0.1em;
+//         opacity: 0.25;
+//         position: absolute;
+//         left: 0;
+//         top: 0.25em;
+//     }
 
-    blockquote:after {
-        content: close-quote;
-        font-size: 4em;
-        line-height: 0.1em;
-        opacity: 0.25;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-}
+//     blockquote:after {
+//         content: close-quote;
+//         font-size: 4em;
+//         line-height: 0.1em;
+//         opacity: 0.25;
+//         position: absolute;
+//         right: 0;
+//         bottom: 0;
+//     }
+// }
 
-section#vision {
-    .pillars {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
-}
+// section#vision {
+//     .pillars {
+//         display: grid;
+//         grid-template-columns: repeat(3, 1fr);
+//         gap: 1rem;
+//     }
+// }
 
-section#team,
-section#references {
-    .photo {
-        width: 20rem;
-        height: auto;
-        border-radius: 10rem;
-    }
-}
+// section#team,
+// section#references {
+//     .photo {
+//         width: 20rem;
+//         height: auto;
+//         border-radius: 10rem;
+//     }
+// }
 
-section#timeline {
-    .timeline-year {
-        text-align: right;
-        width: 50%;
-        float: left;
-        overflow: auto;
-        margin-right: 0px;
-        margin-left: 1px;
+// section#timeline {
+//     .timeline-year {
+//         text-align: right;
+//         width: 50%;
+//         float: left;
+//         overflow: auto;
+//         margin-right: 0px;
+//         margin-left: 1px;
 
-        padding: 1rem;
+//         padding: 1rem;
 
-        &:nth-child(odd) {
-            float: right;
-            margin-left: 0;
-            margin-right: 1px;
-            text-align: left;
-        }
+//         &:nth-child(odd) {
+//             float: right;
+//             margin-left: 0;
+//             margin-right: 1px;
+//             text-align: left;
+//         }
 
-        .timeline-item {
-            border-bottom: 1px solid config.$color-black;
-            margin-bottom: 1rem;
+//         .timeline-item {
+//             border-bottom: 1px solid config.$color-black;
+//             margin-bottom: 1rem;
 
-            &:last-child {
-                border-bottom: none;
-                margin-bottom: 0;
-            }
-        }
-    }
+//             &:last-child {
+//                 border-bottom: none;
+//                 margin-bottom: 0;
+//             }
+//         }
+//     }
 
-    .container::after {
-        content: '';
-        clear: both;
-        display: table;
-    }
-}
+//     .container::after {
+//         content: '';
+//         clear: both;
+//         display: table;
+//     }
+// }
 
 /* Clickable Anchors
 :where(h1, h2, h3, h4, h5, h6) {

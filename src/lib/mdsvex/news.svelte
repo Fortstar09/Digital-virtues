@@ -1,13 +1,7 @@
 <script lang="ts">
     import JsonLd from '$lib/components/JSON-LD.svelte';
 
-    let {
-        date,
-        tags,
-        id,
-        textContent,
-        children
-    } = $props();
+    let { date, tags, id, textContent, children } = $props();
 </script>
 
 <JsonLd
@@ -17,8 +11,8 @@
         articleBody: textContent,
         keywords: tags
             ?.split(',')
-            .map((e) => e.trim())
-            .filter((e) => !!e),
+            .map((e: string) => e.trim())
+            .filter((e: string) => !!e),
         author: {
             '@type': 'Organization',
             name: 'Digital Virtues GmbH',
@@ -32,7 +26,7 @@
     {@render children?.()}
     Tags: {tags
         ?.split(',')
-        .map((e) => e.trim())
-        .filter((e) => !!e)
+        .map((e: string) => e.trim())
+        .filter((e: string) => !!e)
         .join(', ')}
 </div>

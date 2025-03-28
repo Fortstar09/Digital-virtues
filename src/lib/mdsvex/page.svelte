@@ -12,6 +12,6 @@
     {/if}
 </svelte:head>
 
-<section class="container">
+<section class="container content">
     {@render children?.()}
 </section>

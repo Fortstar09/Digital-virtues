@@ -2,17 +2,8 @@
     import { loadImageModule } from '$lib/loadImageModule';
     import JsonLd from '$lib/components/JSON-LD.svelte';
 
-    let {
-        firstName,
-        lastName,
-        description,
-        role,
-        company,
-        companyUrl,
-        img,
-        homepage,
-        linkedin
-    } = $props();
+    let { firstName, lastName, description, role, company, companyUrl, img, homepage, linkedin } =
+        $props();
 
     const loadedImage = loadImageModule(img);
 </script>

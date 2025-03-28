@@ -9,7 +9,8 @@
     <div class="container">
         <h2>
             <blockquote>
-                We build, operate and invest in digital revenue models with an emphasis on crypto and big data.
+                We build, operate and invest in digital revenue models with an emphasis on crypto
+                and big data.
             </blockquote>
         </h2>
     </div>
@@ -36,35 +37,44 @@
                         are able to adapt to changing challenges
                     </li>
                     <li>
-                        Our investments have superb access or at least a unique angle into their markets
+                        Our investments have superb access or at least a unique angle into their
+                        markets
                     </li>
                     <li>
-                        We love to engange on a personal level and very hands-on.
-                        Depending on the individual preferences and needs of the founders we often have 1-2 calls a month
-                        and at least one yearly workshop. We are providing real value i.e.
-                        increasing efficiency and effectiveness significantly as well as adding raw productivity output
-                        if needed.
+                        We love to engange on a personal level and very hands-on. Depending on the
+                        individual preferences and needs of the founders we often have 1-2 calls a
+                        month and at least one yearly workshop. We are providing real value i.e.
+                        increasing efficiency and effectiveness significantly as well as adding raw
+                        productivity output if needed.
                     </li>
                 </ul>
             </div>
             <div class="pillar pillar-consult">
                 <h3>Consulting</h3>
-                <p>Our consulting activities are very diverse reflecting our personal expertise and experiences.
-                They are mainly centered around personal, business and strategic development. Lately we cover mostly
-                entrepreneural topics like scoping, sales and HR as well as specific questions
-                in crypto, software or infrastructre projects.</p>
+                <p>
+                    Our consulting activities are very diverse reflecting our personal expertise and
+                    experiences. They are mainly centered around personal, business and strategic
+                    development. Lately we cover mostly entrepreneural topics like scoping, sales
+                    and HR as well as specific questions in crypto, software or infrastructre
+                    projects.
+                </p>
                 Following a few examples:
                 <ul>
                     <li>Mentoring of students and (future) founders</li>
-                    <li>Supporting entrepreneurs and startup teams on a monthly basis regarding prioritization,
-                        growth, HR and a wide range of other questions and needs as they arise.
+                    <li>
+                        Supporting entrepreneurs and startup teams on a monthly basis regarding
+                        prioritization, growth, HR and a wide range of other questions and needs as
+                        they arise.
                     </li>
                     <li>IT- process design and advisory</li>
-                    <li>Information technology consulting, i.e. make or buy, decision support regarding software
-                        and implementation options, design and implementation of architecture and infrastructure, ...
+                    <li>
+                        Information technology consulting, i.e. make or buy, decision support
+                        regarding software and implementation options, design and implementation of
+                        architecture and infrastructure, ...
                     </li>
-                    <li>As certified project managers we support our customers and partners in any aspect of project and
-                        portfolio management.
+                    <li>
+                        As certified project managers we support our customers and partners in any
+                        aspect of project and portfolio management.
                     </li>
                 </ul>
             </div>

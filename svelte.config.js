@@ -8,6 +8,12 @@ import preview, { textFormatter } from 'remark-preview';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+    compilerOptions: {
+        preserveComments: false,
+        preserveWhitespace: false,
+        discloseVersion: false
+    },
+
     preprocess: [
         sveltePreprocess({
             replace: [[/process\.env\.NODE_ENV/g, JSON.stringify(process.env.NODE_ENV)]],
@@ -15,6 +21,7 @@ const config = {
                 plugins: [autoprefixer]
             }
         }),
+
         mdsvex({
             layout: {
                 page: 'src/lib/mdsvex/page.svelte',
@@ -39,12 +46,15 @@ const config = {
             assets: 'public',
             fallback: undefined,
             precompress: true,
-            strict: true,
+            strict: true
         }),
         paths: {
             assets: '',
             base: '',
-            relative: false
+            relative: true
+        },
+        router: {
+            resolution: 'server'
         }
     },
 

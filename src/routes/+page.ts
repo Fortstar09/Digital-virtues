@@ -1,20 +1,25 @@
 import { loadContent } from '$lib/loadContent';
 
 export async function load() {
-    const testimonials = (await loadContent(
-        import.meta.glob(`/src/content/testimonials/*.{md,svx,svelte.md}`) as Record<
-            string,
-            App.MdsvexResolver
-        >
-    )).filter((item) => item.metadata?.status === 'published')
-    .sort((a, b) => new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime());
+    const testimonials = (
+        await loadContent(
+            import.meta.glob(`/src/content/testimonials/*.{md,svx,svelte.md}`) as Record<
+                string,
+                App.MdsvexResolver
+            >
+        )
+    )
+        .filter((item) => item.metadata?.status === 'published')
+        .sort((a, b) => new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime());
 
-    const news = (await loadContent(
-        import.meta.glob(`/src/content/news/*.{md,svx,svelte.md}`) as Record<
-            string,
-            App.MdsvexResolver
-        >
-    )).filter((item) => item.metadata?.status === 'published');
+    const news = (
+        await loadContent(
+            import.meta.glob(`/src/content/news/*.{md,svx,svelte.md}`) as Record<
+                string,
+                App.MdsvexResolver
+            >
+        )
+    ).filter((item) => item.metadata?.status === 'published');
 
     const sortedNews: Record<string, App.MdsvexFile[]> = {};
 

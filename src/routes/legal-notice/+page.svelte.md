@@ -8,10 +8,10 @@ layout: page
 
 People responsible for the content in accordance with Article 55, Paragraph 2 of the Interstate Broadcasting Treaty (RStV) and Article 5 of the German Telemedia Act (TMG)
 
-Peter Eulberg & Sascha Göbel
-Digital Virtues GmbH
-Pfarrer-Grimm-Str. 6
-55124 Mainz
+Peter Eulberg & Sascha Göbel  
+Digital Virtues GmbH  
+Jugenheimer Straße 19  
+55270 Engelstadt  
 Germany
 
 ## Contact
@@ -20,8 +20,8 @@ Email: <team@digitalvirtues.com>
 
 ## Register Entry
 
-Entered in the Commercial and Companies Register
-Register Number: HRB 46265
+Entered in the Commercial and Companies Register  
+Register Number: HRB 46265  
 Register Court: Mainz
 
 ## VAT Number

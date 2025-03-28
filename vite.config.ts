@@ -1,32 +1,36 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { visualizer } from 'rollup-plugin-visualizer';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-    plugins: [
-        visualizer({
-            emitFile: true,
-            filename: 'stats.html'
-        }),
-        enhancedImages(),
-        sveltekit(),
-    ],
+    clearScreen: false,
+
+    optimizeDeps: {
+        include: ['sass']
+    },
+
+    plugins: [enhancedImages(), sveltekit()],
+
     test: {
         include: ['src/**/*.{test,spec}.{js,ts}']
     },
+
     build: {
-        minify: 'terser',
-        cssMinify: true,
-        terserOptions: {
-            format: {
-                comments: false,
-                indent_level: 2
-            },
-            compress: {
-                passes: 2,
-            },
-        }
+        minify: true,
+        sourcemap: false,
+        cssMinify: true
     },
+
+    server: {
+        open: true,
+        hmr: false
+    },
+
+    css: {
+        modules: {
+            localsConvention: 'dashesOnly'
+        },
+        devSourcemap: false
+    }
 });

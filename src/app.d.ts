@@ -18,6 +18,6 @@ declare global {
     }
 }
 
-import '@poppanator/sveltekit-svg/dist/svg'
+import '@poppanator/sveltekit-svg/dist/svg';
 
 export {};

@@ -14,7 +14,7 @@ When you visit the Site, we automatically collect certain information about your
 
 We collect Device Information using the following technologies:
 
--   "Log files" track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.
+- "Log files" track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.
 
 Additionally when you make an inquiry, we collect your email address to be able to reply to your inquiry.
 
