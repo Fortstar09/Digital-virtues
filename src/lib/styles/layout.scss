@@ -25,6 +25,12 @@ header {
 
     a {
         color: config.$color-white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+        }
     }
 
     .brand {
@@ -87,6 +93,12 @@ footer {
         color: config.$color-white;
     }
 
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
     .container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -127,125 +139,86 @@ main .content {
     }
 }
 
-/* Sections */
-section {
-    min-height: 50vh;
-    vertical-align: middle;
-    padding: 2rem 0;
-
-    &:nth-child(even) {
-        background-color: config.$color-light-grey;
-    }
+/* Export SASS config to CSS Custom Properties for usage in Pages & Components */
+@property --color-white {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-white;
 }
 
-/* Mission Section */
-// section#mission {
-//     h2 {
-//         font-size: 1.75rem;
-//         font-weight: 900;
+@property --color-black {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-black;
+}
 
-//         @media (min-width: config.$breakpoint-mobile) {
-//             font-size: 3rem;
-//         }
-//     }
+@property --color-blue-light {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-blue-light;
+}
 
-//     blockquote {
-//         position: relative;
-//         padding: 1em 3em;
-//     }
+@property --color-blue-dark {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-blue-dark;
+}
 
-//     blockquote:before {
-//         content: open-quote;
-//         font-size: 4em;
-//         line-height: 0.1em;
-//         opacity: 0.25;
-//         position: absolute;
-//         left: 0;
-//         top: 0.25em;
-//     }
+@property --color-cyan {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-cyan;
+}
 
-//     blockquote:after {
-//         content: close-quote;
-//         font-size: 4em;
-//         line-height: 0.1em;
-//         opacity: 0.25;
-//         position: absolute;
-//         right: 0;
-//         bottom: 0;
-//     }
-// }
+@property --breakpoint-mobile {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: config.$breakpoint-mobile;
+}
 
-// section#vision {
-//     .pillars {
-//         display: grid;
-//         grid-template-columns: repeat(3, 1fr);
-//         gap: 1rem;
-//     }
-// }
+@property --breakpoint-desktop {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: config.$breakpoint-desktop;
+}
 
-// section#team,
-// section#references {
-//     .photo {
-//         width: 20rem;
-//         height: auto;
-//         border-radius: 10rem;
-//     }
-// }
+@property --breakpoint-wide {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: config.$breakpoint-wide;
+}
 
-// section#timeline {
-//     .timeline-year {
-//         text-align: right;
-//         width: 50%;
-//         float: left;
-//         overflow: auto;
-//         margin-right: 0px;
-//         margin-left: 1px;
+:root {
+    --color-white: #{config.$color-white};
+    --color-black: #{config.$color-black};
+    --color-blue-light: #{config.$color-blue-light};
+    --color-blue-dark: #{config.$color-blue-dark};
+    --color-cyan: #{config.$color-cyan};
+    --breakpoint-mobile: #{config.$breakpoint-mobile};
+    --breakpoint-desktop: #{config.$breakpoint-desktop};
+    --breakpoint-wide: #{config.$breakpoint-wide};
+}
 
-//         padding: 1rem;
+/* Clickable Anchors */
+@media (min-width: config.$breakpoint-mobile) {
+    :where(h1, h2, h3, h4, h5, h6) {
+        .icon-link {
+            position: relative;
 
-//         &:nth-child(odd) {
-//             float: right;
-//             margin-left: 0;
-//             margin-right: 1px;
-//             text-align: left;
-//         }
+            &::before {
+                content: '#';
+                position: absolute;
+                left: -2ch;
+                top: 0;
+                line-height: 1;
+                opacity: 0;
+                text-decoration: underline;
+                color: config.$color-blue-light;
+            }
+        }
 
-//         .timeline-item {
-//             border-bottom: 1px solid config.$color-black;
-//             margin-bottom: 1rem;
-
-//             &:last-child {
-//                 border-bottom: none;
-//                 margin-bottom: 0;
-//             }
-//         }
-//     }
-
-//     .container::after {
-//         content: '';
-//         clear: both;
-//         display: table;
-//     }
-// }
-
-/* Clickable Anchors
-:where(h1, h2, h3, h4, h5, h6) {
-    .icon-link {
-        position: relative;
-
-        &::before {
-            content: '#';
-            position: absolute;
-            left: -1ch;
-            top: 0;
-            line-height: 1;
-            opacity: 0;
-            text-decoration: underline;
+        &:hover .icon-link::before {
+            opacity: 1;
         }
     }
-
-    &:hover .icon-link::before {
-        opacity: 1;
-    }
 }
-*/

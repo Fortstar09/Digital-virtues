@@ -24,7 +24,8 @@ export default defineConfig({
 
     server: {
         open: true,
-        hmr: false
+        hmr: false,
+        // host: '0.0.0.0'
     },
 
     css: {
