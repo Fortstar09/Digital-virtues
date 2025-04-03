@@ -1,0 +1,224 @@
+@use 'config';
+@use 'reset';
+@use '@fontsource-variable/comfortaa';
+@use 'font-geist-mono';
+
+body {
+    font-family: config.$font-stack-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: config.$color-black;
+}
+
+/* Content Container */
+.container {
+    max-width: config.$max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background-color: config.$color-blue-dark;
+    color: config.$color-white;
+    padding: 2rem 0;
+
+    a {
+        color: config.$color-white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+        }
+    }
+
+    .brand {
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+
+        img {
+            height: 2rem;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: config.$breakpoint-desktop) {
+            justify-content: space-between;
+        }
+
+        > a {
+            margin-bottom: 0.75rem;
+
+            @media (min-width: config.$breakpoint-desktop) {
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            flex: 1 0 100%;
+            justify-content: center;
+
+            @media (min-width: config.$breakpoint-desktop) {
+                flex: 0 1 auto;
+            }
+
+            li {
+                margin-right: 1rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Footer */
+footer {
+    background-color: config.$color-blue-dark;
+    color: config.$color-white;
+    padding: 2rem 0;
+
+    a {
+        color: config.$color-white;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+
+        @media (min-width: config.$breakpoint-mobile) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+    }
+}
+
+/* Markdown Content */
+main .content {
+    h1,
+    h2,
+    h3 {
+        margin: 1.5rem 0 1rem 0;
+    }
+    p,
+    ul {
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
+
+    a {
+        text-decoration: underline;
+        color: config.$color-blue-light;
+    }
+}
+
+/* Export SASS config to CSS Custom Properties for usage in Pages & Components */
+@property --color-white {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-white;
+}
+
+@property --color-black {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-black;
+}
+
+@property --color-blue-light {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-blue-light;
+}
+
+@property --color-blue-dark {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-blue-dark;
+}
+
+@property --color-cyan {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: config.$color-cyan;
+}
+
+@property --breakpoint-mobile {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: config.$breakpoint-mobile;
+}
+
+@property --breakpoint-desktop {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: config.$breakpoint-desktop;
+}
+
+@property --breakpoint-wide {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: config.$breakpoint-wide;
+}
+
+:root {
+    --color-white: #{config.$color-white};
+    --color-black: #{config.$color-black};
+    --color-blue-light: #{config.$color-blue-light};
+    --color-blue-dark: #{config.$color-blue-dark};
+    --color-cyan: #{config.$color-cyan};
+    --breakpoint-mobile: #{config.$breakpoint-mobile};
+    --breakpoint-desktop: #{config.$breakpoint-desktop};
+    --breakpoint-wide: #{config.$breakpoint-wide};
+}
+
+/* Clickable Anchors */
+@media (min-width: config.$breakpoint-mobile) {
+    :where(h1, h2, h3, h4, h5, h6) {
+        .icon-link {
+            position: relative;
+
+            &::before {
+                content: '#';
+                position: absolute;
+                left: -2ch;
+                top: 0;
+                line-height: 1;
+                opacity: 0;
+                text-decoration: underline;
+                color: config.$color-blue-light;
+            }
+        }
+
+        &:hover .icon-link::before {
+            opacity: 1;
+        }
+    }
+}
