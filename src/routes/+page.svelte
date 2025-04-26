@@ -273,7 +273,7 @@
             position: relative;
             text-align: center;
             padding: 1em 0.5em;
-            text-wrap: pretty;
+            
         }
 
         .image-ani {
@@ -335,7 +335,7 @@
         p {
             width: 100%;
             text-align: center;
-            text-wrap: pretty;
+            
             font-size: 1.25em;
             max-width: 900px;
         }
@@ -357,7 +357,7 @@
                 padding-left: 1em;
                 line-height: 1.5;
                 margin-bottom: 1.5em;
-                text-wrap: pretty;
+                
             }
         }
     }
@@ -394,7 +394,7 @@
 
                 h3,
                 p {
-                    text-wrap: pretty;
+                    
                 }
 
                 h3 {

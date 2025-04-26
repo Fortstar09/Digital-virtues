@@ -88,25 +88,25 @@
             text-align: left;
             font-size: 0.85rem;
             max-width: 400px;
-            text-wrap: pretty;
+            overflow-wrap: break-word;
 
-            // &::before {
-            //     content: url('$lib/assets/logo-v-white.svg');
-            //     min-width: 1.25em;
-            //     min-height: 1.25em;
-            //     position: absolute;
-            //     left: 0;
-            //     bottom: 0;
-            // }
+           /* &::before {
+                content: url('$lib/assets/logo-v-white.svg');
+                min-width: 1.25em;
+                min-height: 1.25em;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
 
-            // &::after {
-            //     content: url('$lib/assets/logo-d-white.svg');
-            //     min-width: 1.25em;
-            //     min-height: 1.25em;
-            //     position: absolute;
-            //     right: 0;
-            //     top: 0;
-            // }
+            &::after {
+                content: url('$lib/assets/logo-d-white.svg');
+                min-width: 1.25em;
+                min-height: 1.25em;
+                position: absolute;
+                right: 0;
+                top: 0;
+            } */
         }
 
         .photo {

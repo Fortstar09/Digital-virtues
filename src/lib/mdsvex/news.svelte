@@ -34,7 +34,7 @@
 <style lang="scss">
     .timeline-item {
         margin-bottom: 2rem;
-        text-wrap: pretty;
+        overflow-wrap: break-word;
 
         &:last-child {
             border-bottom: none;

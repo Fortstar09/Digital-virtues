@@ -90,7 +90,7 @@
         p {
             margin-bottom: 1rem;
             line-height: 1.5;
-            text-wrap: pretty;
+            overflow-wrap: break-word;
             max-width: 490px;
         }
         a{
