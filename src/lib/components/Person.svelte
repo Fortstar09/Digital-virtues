@@ -55,9 +55,14 @@
         width: 100%;
         gap: 1.5rem;
 
+        &:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+
         .photo-container {
             position: relative;
-            width: 20rem;
+            width: 12rem;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -68,6 +73,7 @@
         }
 
 .person-info{
+
 
         h3 {
             font-weight: 700;
@@ -98,8 +104,6 @@
                 text-decoration: underline;
             }
         }
-
-
     }
         .photo {
             width: 100%;

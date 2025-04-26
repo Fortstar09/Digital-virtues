@@ -1,6 +1,10 @@
 <script lang="ts">
     import Person from '$lib/components/Person.svelte';
 
+    import pillarImg from '$lib/assets/img/res/stars-bg.jpg';
+    import euroIcon from '$lib/assets/img/res/euro-icon.svg';
+    import profileIcon from '$lib/assets/img/res/profile-icon.svg';
+    import rocketIcon from '$lib/assets/img/res/rocket-icon.svg';
     import dBlueLight from '$lib/assets/logo-d-blue-light.svg';
     import vBlueLight from '$lib/assets/logo-v-blue-light.svg';
 
@@ -108,6 +112,7 @@
             <h2>Pillars of Operation</h2>
             <div class="pillars">
                 <div class="pillar pillar-invest">
+                    <img src={euroIcon} alt="" />
                     <h3>Venture Capital / Business Angel Activities</h3>
                     <ul>
                         <li>
@@ -128,6 +133,7 @@
                     </ul>
                 </div>
                 <div class="pillar pillar-consult">
+                    <img src={profileIcon} alt="" />
                     <h3>Consulting</h3>
                     <p>
                         Our consulting activities are very diverse reflecting our personal expertise
@@ -157,6 +163,7 @@
                     </ul>
                 </div>
                 <div class="pillar pillar-projects">
+                    <img src={rocketIcon} alt="" />
                     <h3>Projects, Activities & Interests</h3>
                     <ul>
                         <li>
@@ -193,13 +200,16 @@
                         <!-- <li>Proxy Manager</li> -->
                     </ul>
                 </div>
+                <div class=" pillar-img">
+                    <img src={pillarImg} alt="" />
+                </div>
             </div>
         </div>
     </section>
 
     <section id="references">
-        <div class="container">
-            <h2>Testimonials</h2>
+        <h2>Testimonials</h2>
+        <div class="sliders">
             <div class="testimonials">
                 {#each data.testimonials as testimonial}
                     <testimonial.default id="testimonial-{testimonial.slug}" />
@@ -245,7 +255,7 @@
                 font-weight: 900;
                 text-align: center;
                 font-size: 4em;
-                margin-bottom: 0.5em;
+                margin-bottom: 1em;
             }
         }
     }
@@ -355,8 +365,9 @@
     /* Pillars Section */
     section#pillars {
         .pillars {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             align-items: stretch;
             justify-content: center;
             gap: 1em;
@@ -364,23 +375,30 @@
             .pillar {
                 background-color: rgb(from var(--color-blue-dark) r g b / 0.5);
                 border-radius: 1rem;
-
-                flex: 1 1 95%;
                 padding: 1em;
 
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+
+                img {
+                    width: 100px;
+                    margin-bottom: 1.5rem;
+                }
+
                 @media (min-width: 1024px) {
-                    flex: 1 1 30%;
                     padding: 2em;
                     border-radius: 2rem;
                 }
 
                 h3,
-                ul,
                 p {
                     text-wrap: pretty;
                 }
 
                 h3 {
+                    font-size: 1.5rem;
                     margin-bottom: 1em;
                 }
 
@@ -392,6 +410,25 @@
                 ul li {
                     margin-left: 0.75em;
                     padding-left: 0.25em;
+                }
+            }
+            .pillar-img {
+                background: #000;
+                display: flex;
+                padding: 0px;
+                justify-content: center;
+                align-items: start;
+                border-radius: 1rem;
+                // flex: 1 1 95%;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    border-radius: 1rem;
+
+                    height: auto;
+                    object-fit: cover;
                 }
             }
         }
@@ -410,7 +447,7 @@
         .team-info {
             display: flex;
             flex-direction: column;
-            gap: 3.5rem;
+            gap: 4rem;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
@@ -427,6 +464,34 @@
 
     /* References Section */
     section#references {
+        .sliders {
+        width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+            .testimonials {
+                display: grid;
+                grid-template-columns: repeat(3, 50%);
+                width: 100%;
+                // background-color: rgb(from var(--color-blue-dark) r g b / 0.5);
+
+                // @media (min-width: 768px) {
+                //     max-width: var(--breakpoint-desktop);
+                //     margin: auto;
+                //     flex-direction: row;
+                //     flex-wrap: wrap;
+                //     justify-content: center;
+                //     align-items: stretch;
+                // }
+            }
+
+            h2 {
+                margin-bottom: 1em;
+            }
+        }
     }
 
     /* Timeline Section */
@@ -550,205 +615,205 @@
         --i: 35deg;
 
         background-color: var(--color-blue-dark);
+        background: url('$lib/assets/img/res/gradient-bg.jpg') no-repeat center center fixed;
+        //     background:
+        //         radial-gradient(
+        //             ellipse at var(--a) var(--b),
+        //             rgb(from var(--color-cyan) r g b / 0.5),
+        //             transparent 45%,
+        //             transparent
+        //         ),
+        //         radial-gradient(
+        //             ellipse at var(--c) var(--d),
+        //             rgb(from var(--color-blue-dark) r g b / 0.75),
+        //             transparent 75%,
+        //             transparent
+        //         ),
+        //         radial-gradient(
+        //             ellipse at var(--e) var(--f),
+        //             rgb(from var(--color-blue-light) r g b / 0.75),
+        //             transparent 55%,
+        //             transparent
+        //         ),
+        //         radial-gradient(
+        //             ellipse at var(--g) var(--h),
+        //             rgb(from var(--color-white) r g b / 0.25),
+        //             transparent 65%,
+        //             transparent
+        //         ),
+        //         linear-gradient(var(--i), var(--color-blue-dark), var(--color-blue-light));
 
-        background:
-            radial-gradient(
-                ellipse at var(--a) var(--b),
-                rgb(from var(--color-cyan) r g b / 0.5),
-                transparent 45%,
-                transparent
-            ),
-            radial-gradient(
-                ellipse at var(--c) var(--d),
-                rgb(from var(--color-blue-dark) r g b / 0.75),
-                transparent 75%,
-                transparent
-            ),
-            radial-gradient(
-                ellipse at var(--e) var(--f),
-                rgb(from var(--color-blue-light) r g b / 0.75),
-                transparent 55%,
-                transparent
-            ),
-            radial-gradient(
-                ellipse at var(--g) var(--h),
-                rgb(from var(--color-white) r g b / 0.25),
-                transparent 65%,
-                transparent
-            ),
-            linear-gradient(var(--i), var(--color-blue-dark), var(--color-blue-light));
+        //     animation:
+        //         a 26s linear infinite alternate,
+        //         b 24s linear infinite alternate,
+        //         c 42s linear infinite alternate,
+        //         d 23s linear infinite alternate,
+        //         e 22s linear infinite alternate,
+        //         f 44s linear infinite alternate,
+        //         g 28s linear infinite alternate,
+        //         h 39s linear infinite alternate,
+        //         i 20s linear infinite alternate;
+        // }
 
-        animation:
-            a 26s linear infinite alternate,
-            b 24s linear infinite alternate,
-            c 42s linear infinite alternate,
-            d 23s linear infinite alternate,
-            e 22s linear infinite alternate,
-            f 44s linear infinite alternate,
-            g 28s linear infinite alternate,
-            h 39s linear infinite alternate,
-            i 20s linear infinite alternate;
-    }
+        // @keyframes a {
+        //     from {
+        //         --a: 31%;
+        //     }
+        //     25% {
+        //         --a: 36%;
+        //     }
+        //     50% {
+        //         --a: 22%;
+        //     }
+        //     75% {
+        //         --a: 35%;
+        //     }
+        //     to {
+        //         --a: 92%;
+        //     }
+        // }
 
-    @keyframes a {
-        from {
-            --a: 31%;
-        }
-        25% {
-            --a: 36%;
-        }
-        50% {
-            --a: 22%;
-        }
-        75% {
-            --a: 35%;
-        }
-        to {
-            --a: 92%;
-        }
-    }
+        // @keyframes b {
+        //     from {
+        //         --b: -11%;
+        //     }
+        //     25% {
+        //         --b: 107%;
+        //     }
+        //     50% {
+        //         --b: 48%;
+        //     }
+        //     75% {
+        //         --b: 122%;
+        //     }
+        //     to {
+        //         --b: 5%;
+        //     }
+        // }
 
-    @keyframes b {
-        from {
-            --b: -11%;
-        }
-        25% {
-            --b: 107%;
-        }
-        50% {
-            --b: 48%;
-        }
-        75% {
-            --b: 122%;
-        }
-        to {
-            --b: 5%;
-        }
-    }
+        // @keyframes c {
+        //     from {
+        //         --c: -24%;
+        //     }
+        //     25% {
+        //         --c: 65%;
+        //     }
+        //     50% {
+        //         --c: 17%;
+        //     }
+        //     75% {
+        //         --c: 22%;
+        //     }
+        //     to {
+        //         --c: 34%;
+        //     }
+        // }
 
-    @keyframes c {
-        from {
-            --c: -24%;
-        }
-        25% {
-            --c: 65%;
-        }
-        50% {
-            --c: 17%;
-        }
-        75% {
-            --c: 22%;
-        }
-        to {
-            --c: 34%;
-        }
-    }
+        // @keyframes d {
+        //     from {
+        //         --d: 29%;
+        //     }
+        //     25% {
+        //         --d: 52%;
+        //     }
+        //     50% {
+        //         --d: -21%;
+        //     }
+        //     75% {
+        //         --d: 92%;
+        //     }
+        //     to {
+        //         --d: 61%;
+        //     }
+        // }
 
-    @keyframes d {
-        from {
-            --d: 29%;
-        }
-        25% {
-            --d: 52%;
-        }
-        50% {
-            --d: -21%;
-        }
-        75% {
-            --d: 92%;
-        }
-        to {
-            --d: 61%;
-        }
-    }
+        // @keyframes e {
+        //     from {
+        //         --e: 49%;
+        //     }
+        //     25% {
+        //         --e: -20%;
+        //     }
+        //     50% {
+        //         --e: 38%;
+        //     }
+        //     75% {
+        //         --e: -3%;
+        //     }
+        //     to {
+        //         --e: 111%;
+        //     }
+        // }
 
-    @keyframes e {
-        from {
-            --e: 49%;
-        }
-        25% {
-            --e: -20%;
-        }
-        50% {
-            --e: 38%;
-        }
-        75% {
-            --e: -3%;
-        }
-        to {
-            --e: 111%;
-        }
-    }
+        // @keyframes f {
+        //     from {
+        //         --f: 102%;
+        //     }
+        //     25% {
+        //         --f: 30%;
+        //     }
+        //     50% {
+        //         --f: 100%;
+        //     }
+        //     75% {
+        //         --f: 111%;
+        //     }
+        //     to {
+        //         --f: 72%;
+        //     }
+        // }
 
-    @keyframes f {
-        from {
-            --f: 102%;
-        }
-        25% {
-            --f: 30%;
-        }
-        50% {
-            --f: 100%;
-        }
-        75% {
-            --f: 111%;
-        }
-        to {
-            --f: 72%;
-        }
-    }
+        // @keyframes g {
+        //     from {
+        //         --g: 56%;
+        //     }
+        //     25% {
+        //         --g: 98%;
+        //     }
+        //     50% {
+        //         --g: 105%;
+        //     }
+        //     75% {
+        //         --g: 76%;
+        //     }
+        //     to {
+        //         --g: 14%;
+        //     }
+        // }
 
-    @keyframes g {
-        from {
-            --g: 56%;
-        }
-        25% {
-            --g: 98%;
-        }
-        50% {
-            --g: 105%;
-        }
-        75% {
-            --g: 76%;
-        }
-        to {
-            --g: 14%;
-        }
-    }
+        // @keyframes h {
+        //     from {
+        //         --h: 112%;
+        //     }
+        //     25% {
+        //         --h: 98%;
+        //     }
+        //     50% {
+        //         --h: 32%;
+        //     }
+        //     75% {
+        //         --h: -25%;
+        //     }
+        //     to {
+        //         --h: 64%;
+        //     }
+        // }
 
-    @keyframes h {
-        from {
-            --h: 112%;
-        }
-        25% {
-            --h: 98%;
-        }
-        50% {
-            --h: 32%;
-        }
-        75% {
-            --h: -25%;
-        }
-        to {
-            --h: 64%;
-        }
-    }
-
-    @keyframes i {
-        from {
-            --i: 35deg;
-        }
-        25% {
-            --i: 211deg;
-        }
-        50% {
-            --i: 151deg;
-        }
-        75% {
-            --i: 62deg;
-        }
-        to {
-            --i: 186deg;
-        }
+        // @keyframes i {
+        //     from {
+        //         --i: 35deg;
+        //     }
+        //     25% {
+        //         --i: 211deg;
+        //     }
+        //     50% {
+        //         --i: 151deg;
+        //     }
+        //     75% {
+        //         --i: 62deg;
+        //     }
+        //     to {
+        //         --i: 186deg;
+        //     }
     }
 </style>
