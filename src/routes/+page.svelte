@@ -1,12 +1,19 @@
 <script lang="ts">
     import Person from '$lib/components/Person.svelte';
 
+    import dBlueLight from '$lib/assets/logo-d-blue-light.svg';
+    import vBlueLight from '$lib/assets/logo-v-blue-light.svg';
+
     import { base } from '$app/paths';
     let { data } = $props();
 </script>
 
 <div class="main-content">
     <section id="mission">
+        <div class="image-ani">
+            <img src={dBlueLight} class="left" alt="" />
+            <img src={vBlueLight} class="right" alt="" />
+        </div>
         <div class="container">
             <h2>
                 <blockquote>
@@ -20,7 +27,7 @@
     </section>
 
     <section id="vision">
-        <div class="container">
+        <div class="container center">
             <h2>Vision</h2>
             <p>
                 To be a driving force in digital transformation by empowering exceptional
@@ -63,6 +70,36 @@
                     entrepreneurs and startup teams.
                 </dd>
             </dl>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2>Team</h2>
+            <div class="team-info">
+                <Person
+                    firstName="Peter"
+                    lastName="Eulberg"
+                    description="Successful blockchain startup founder with executive leadership experience, specializing in organizational development, portfolio management, and expertise spanning entrepreneurship, web3, technology, and business process analysis."
+                    role="CEO"
+                    company="Digital Virtues GmbH"
+                    companyUrl="https://digitalvirtues.com/"
+                    img="peter-eulberg.png"
+                    homepage="https://www.saschagoebel.com/"
+                    linkedin="https://www.linkedin.com/in/eulberg/"
+                />
+                <Person
+                    firstName="Sascha"
+                    lastName="Göbel"
+                    description="Data Wrangler, AI Whisperer, Code Monkey, Investor, Serial Entrepreneur, Helpdesk, Meme Connoisseur. I do stuff with computers."
+                    role="CTO"
+                    company="Digital Virtues GmbH"
+                    companyUrl="https://digitalvirtues.com/"
+                    img="sascha-goebel.png"
+                    homepage="https://www.saschagoebel.com/"
+                    linkedin="https://www.linkedin.com/in/saschagoebel/"
+                />
+            </div>
         </div>
     </section>
 
@@ -160,34 +197,6 @@
         </div>
     </section>
 
-    <section id="team">
-        <div class="container">
-            <h2>Team</h2>
-            <Person
-                firstName="Peter"
-                lastName="Eulberg"
-                description="Successful blockchain startup founder with executive leadership experience, specializing in organizational development, portfolio management, and expertise spanning entrepreneurship, web3, technology, and business process analysis."
-                role="CEO"
-                company="Digital Virtues GmbH"
-                companyUrl="https://digitalvirtues.com/"
-                img="peter-eulberg.jpg"
-                homepage="https://eulberg.info/"
-                linkedin="https://www.linkedin.com/in/eulberg/"
-            />
-            <Person
-                firstName="Sascha"
-                lastName="Göbel"
-                description="Data Wrangler, AI Whisperer, Code Monkey, Investor, Serial Entrepreneur, Helpdesk, Meme Connoisseur. I do stuff with computers."
-                role="CTO"
-                company="Digital Virtues GmbH"
-                companyUrl="https://digitalvirtues.com/"
-                img="sascha-goebel.jpg"
-                homepage="https://www.saschagoebel.com/"
-                linkedin="https://www.linkedin.com/in/saschagoebel/"
-            />
-        </div>
-    </section>
-
     <section id="references">
         <div class="container">
             <h2>Testimonials</h2>
@@ -218,7 +227,7 @@
     /* Sections */
     section {
         vertical-align: middle;
-        padding: 2rem 0;
+        padding: 8rem 0;
 
         color: var(--color-white);
 
@@ -243,6 +252,8 @@
 
     /* Mission Section */
     section#mission {
+        position: relative;
+
         h2 {
             font-size: 1.75rem;
             font-weight: 900;
@@ -250,26 +261,29 @@
 
         blockquote {
             position: relative;
+            text-align: center;
             padding: 1em 0.5em;
             text-wrap: pretty;
         }
 
-        blockquote::before {
-            content: url('$lib/assets/logo-d-blue-light.svg');
-            min-width: 1.5em;
-            min-height: 1.5em;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
+        .image-ani {
+            img {
+                width: 100px;
+                height: 100px;
+            }
+            .left {
+                position: absolute;
+                left: 10%;
+                top: 9%;
+                transform: rotate(270deg);
+            }
 
-        blockquote::after {
-            content: url('$lib/assets/logo-v-blue-light.svg');
-            min-width: 1.25em;
-            min-height: 1.25em;
-            position: absolute;
-            left: 0;
-            bottom: 0;
+            .right {
+                position: absolute;
+                right: 10%;
+                top: 70%;
+                transform: rotate(270deg);
+            }
         }
 
         @media (min-width: 768px) {
@@ -280,21 +294,40 @@
             blockquote {
                 padding: 1em 3em;
 
-                &::before {
-                    right: 1.75em;
-                }
+                // &::before {
+                //     // right: calc(100% - 2em);
+                //     right: 50%;
+                //     top: 50%;
+                //     transform: translateX(100%);
 
-                &::after {
-                    left: 2em;
-                }
+                // }
+
+                // &::after {
+                //     // right: calc(100% - 2em);
+                //     right: 50%;
+                //     top: 50%;
+                //     transform: translateX(100%);
+                // }
             }
         }
     }
 
     section#vision {
+        .center {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         p {
+            width: 100%;
             text-align: center;
             text-wrap: pretty;
+            font-size: 1.25em;
+            max-width: 900px;
         }
     }
 
@@ -303,6 +336,7 @@
         dl {
             margin: auto;
             text-align: center;
+            max-width: 900px;
 
             dt {
                 font-weight: 700;
@@ -369,6 +403,26 @@
 
     /* Team Section */
     section#team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .team-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            @media (min-width: 768px) {
+                max-width: var(--breakpoint-desktop);
+                margin: auto;
+            }
+        }
+        h2 {
+            margin-bottom: 1em;
+        }
     }
 
     /* References Section */

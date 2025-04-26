@@ -1,6 +1,8 @@
 <script lang="ts">
     import { loadImageModule } from '$lib/loadImageModule';
     import JsonLd from '$lib/components/JSON-LD.svelte';
+    import dvBlueDark from '$lib/assets/logo-dv-blue-dark.svg';
+    
 
     let { firstName, lastName, description, role, company, companyUrl, img, homepage, linkedin } =
         $props();
@@ -9,7 +11,8 @@
 </script>
 
 <div class="person">
-    <JsonLd
+    <div class="photo-container">
+        <JsonLd
         type="Person"
         data={{
             familyName: lastName,
@@ -29,8 +32,10 @@
             class="photo"
         />
     {/if}
+    </div>
 
-    <h3>{firstName} {lastName}</h3>
+    <div class="person-info">
+        <h3>{firstName} {lastName}</h3>
     <h4><a href={companyUrl}>{role} {company}</a></h4>
     <p>{description}</p>
 
@@ -38,11 +43,31 @@
         <a href={homepage}>Homepage</a>
         <a href={linkedin}>LinkedIn</a>
     </div>
+    </div>
 </div>
 
 <style lang="scss">
     .person {
-        margin: 3rem 1rem;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1.5rem;
+
+        .photo-container {
+            position: relative;
+            width: 20rem;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: var(--color-background);
+        }
+
+.person-info{
 
         h3 {
             font-weight: 700;
@@ -60,38 +85,31 @@
             margin-bottom: 1rem;
             line-height: 1.5;
             text-wrap: pretty;
+            max-width: 490px;
+        }
+        a{
+            text-decoration: none;
+            // color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-right: 1rem;
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
-        .links {
-            text-align: right;
-        }
 
+    }
         .photo {
-            width: 15rem;
-            height: auto;
-            border-radius: 7.5rem;
-            margin: 1em auto;
+            width: 100%;
+          
         }
 
         @media (min-width: 768px) {
             max-width: var(--breakpoint-desktop);
             .photo {
-                float: left;
-                margin-right: 2rem;
-            }
-
-            &:nth-child(odd) {
-                text-align: right;
-
-                .photo {
-                    float: right;
-                    margin-right: 0;
-                    margin-left: 2rem;
-                }
-
-                .links {
-                    text-align: left;
-                }
+               
             }
         }
 
