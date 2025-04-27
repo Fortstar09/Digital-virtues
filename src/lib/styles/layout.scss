@@ -20,7 +20,7 @@ body {
 /* Header */
 header {
     padding: 2rem 0;
-    background: url('$lib/assets/img/res/stars-bg.jpg') center center / cover no-repeat;
+    background: url('$lib/assets/img/res/hero.jpg') center  center / cover no-repeat;
     height: 100dvh;
 
     a {
@@ -112,9 +112,10 @@ header {
 
 /* Footer */
 footer {
-    background-color: config.$color-blue-dark;
+    background-color: config.$color-black;
     color: config.$color-white;
     padding: 2rem 0;
+    border-top: 1px solid config.$color-light-grey;
 
     a {
         color: config.$color-white;

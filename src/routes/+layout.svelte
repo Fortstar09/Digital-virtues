@@ -87,10 +87,47 @@
                 <li><a href="{base}/">Knowledge Collector</a></li>
                 <li><a href="{base}/">Creator Cartel</a></li>
                 <li><a href="{base}/">Trading AI</a></li> -->
-                <li><a href="{base}/anyblock-analytics/">Anyblock Analytics GmbH</a></li>
-                <li><a href="https://www.dielichtmatrosen.de/">Lichtmatrosen</a></li>
-                <li><a href="https://peachandlime.shop/">Peach & Lime</a></li>
+                <li>
+                    <a href="{base}/anyblock-analytics/" target="_blank">Anyblock Analytics GmbH</a>
+                </li>
+                <li>
+                    <a href="https://www.dielichtmatrosen.de/" target="_blank">Lichtmatrosen</a>
+                </li>
+                <li><a href="https://peachandlime.shop/" target="_blank">Peach & Lime</a></li>
             </ul>
         </div>
     </div>
 </footer>
+
+<style lang="scss">
+    footer{
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 2rem;
+            padding: 1rem 0;
+
+            a{
+                
+                text-decoration: none;
+            }
+
+            a:hover{
+                text-decoration: underline;
+                color: aquamarine;
+            }
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                list-style: none;
+
+                li{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+</style>

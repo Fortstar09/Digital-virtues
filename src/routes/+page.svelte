@@ -1,5 +1,6 @@
 <script lang="ts">
     import Person from '$lib/components/Person.svelte';
+    import Timeline from '$lib/components/Timeline.svelte';
 
     import pillarImg from '$lib/assets/img/res/stars-bg.jpg';
     import euroIcon from '$lib/assets/img/res/euro-icon.svg';
@@ -13,222 +14,228 @@
 </script>
 
 <div class="main-content">
-    <section id="mission">
-        <div class="image-ani">
-            <img src={dBlueLight} class="left" alt="" />
-            <img src={vBlueLight} class="right" alt="" />
-        </div>
-        <div class="container">
-            <h2>
-                <blockquote>
-                    We build, operate and invest in digital revenue models with an emphasis on
-                    crypto and big data.<br />
-                    We invest in people and ideas, build and operate software, and maintain long-term
-                    personal relationships that reflect our passion for digital innovation.
-                </blockquote>
-            </h2>
-        </div>
-    </section>
-
-    <section id="vision">
-        <div class="container center">
-            <h2>Vision</h2>
-            <p>
-                To be a driving force in digital transformation by empowering exceptional
-                entrepreneurs, creating sustainable digital value, and fostering an ecosystem of
-                innovation through meaningful relationships and hands-on engagement.
-            </p>
-        </div>
-    </section>
-
-    <section id="values">
-        <div class="container">
-            <h2>Values</h2>
-            <dl>
-                <dt>Digital Transformation</dt>
-                <dd>
-                    We embrace and drive the evolution of digital technologies and business models.
-                </dd>
-                <dt>Digital Sustainability ("Digitale Erneuerbarkeit")</dt>
-                <dd>We create and support digital solutions that are sustainable and renewable.</dd>
-                <dt>Digital Innovation</dt>
-                <dd>We constantly seek and develop new digital approaches and solutions.</dd>
-                <dt>Personal Engagement</dt>
-                <dd>
-                    We build genuine, long-term relationships and engage on a personal level with
-                    founders and partners.
-                </dd>
-                <dt>Hands-on Value Creation</dt>
-                <dd>
-                    We provide real value by actively contributing our expertise and resources,
-                    increasing efficiency and effectiveness for our partners.
-                </dd>
-                <dt>Adaptability</dt>
-                <dd>
-                    We value teams and individuals who can adapt to changing challenges in the
-                    digital landscape.
-                </dd>
-                <dt>Knowledge Sharing</dt>
-                <dd>
-                    We share our expertise through consulting, mentoring, and strategic support for
-                    entrepreneurs and startup teams.
-                </dd>
-            </dl>
-        </div>
-    </section>
-
-    <section id="team">
-        <div class="container">
-            <h2>Team</h2>
-            <div class="team-info">
-                <Person
-                    firstName="Peter"
-                    lastName="Eulberg"
-                    description="Successful blockchain startup founder with executive leadership experience, specializing in organizational development, portfolio management, and expertise spanning entrepreneurship, web3, technology, and business process analysis."
-                    role="CEO"
-                    company="Digital Virtues GmbH"
-                    companyUrl="https://digitalvirtues.com/"
-                    img="peter-eulberg.png"
-                    homepage="https://www.saschagoebel.com/"
-                    linkedin="https://www.linkedin.com/in/eulberg/"
-                />
-                <Person
-                    firstName="Sascha"
-                    lastName="Göbel"
-                    description="Data Wrangler, AI Whisperer, Code Monkey, Investor, Serial Entrepreneur, Helpdesk, Meme Connoisseur. I do stuff with computers."
-                    role="CTO"
-                    company="Digital Virtues GmbH"
-                    companyUrl="https://digitalvirtues.com/"
-                    img="sascha-goebel.png"
-                    homepage="https://www.saschagoebel.com/"
-                    linkedin="https://www.linkedin.com/in/saschagoebel/"
-                />
+    <div class="contain-bg">
+        <section id="mission">
+            <div class="image-ani">
+                <img src={dBlueLight} class="left" alt="" />
+                <img src={vBlueLight} class="right" alt="" />
             </div>
-        </div>
-    </section>
+            <div class="container">
+                <h2>
+                    <blockquote>
+                        We build, operate and invest in digital revenue models with an emphasis on
+                        crypto and big data.<br />
+                        We invest in people and ideas, build and operate software, and maintain long-term
+                        personal relationships that reflect our passion for digital innovation.
+                    </blockquote>
+                </h2>
+            </div>
+        </section>
 
-    <section id="pillars">
-        <div class="container">
-            <h2>Pillars of Operation</h2>
-            <div class="pillars">
-                <div class="pillar pillar-invest">
-                    <img src={euroIcon} alt="" />
-                    <h3>Venture Capital / Business Angel Activities</h3>
-                    <ul>
-                        <li>
-                            We invest in strong founder teams with exceptional know how and skills
-                            that are able to adapt to changing challenges
-                        </li>
-                        <li>
-                            Our investments have superb access or at least a unique angle into their
-                            markets
-                        </li>
-                        <li>
-                            We love to engange on a personal level and very hands-on. Depending on
-                            the individual preferences and needs of the founders we often have 1-2
-                            calls a month and at least one yearly workshop. We are providing real
-                            value i.e. increasing efficiency and effectiveness significantly as well
-                            as adding raw productivity output if needed.
-                        </li>
-                    </ul>
-                </div>
-                <div class="pillar pillar-consult">
-                    <img src={profileIcon} alt="" />
-                    <h3>Consulting</h3>
-                    <p>
-                        Our consulting activities are very diverse reflecting our personal expertise
-                        and experiences. They are mainly centered around personal, business and
-                        strategic development. Lately we cover mostly entrepreneural topics like
-                        scoping, sales and HR as well as specific questions in crypto, software or
-                        infrastructre projects.
-                    </p>
-                    Following a few examples:
-                    <ul>
-                        <li>Mentoring of students and (future) founders</li>
-                        <li>
-                            Supporting entrepreneurs and startup teams on a monthly basis regarding
-                            prioritization, growth, HR and a wide range of other questions and needs
-                            as they arise.
-                        </li>
-                        <li>IT- process design and advisory</li>
-                        <li>
-                            Information technology consulting, i.e. make or buy, decision support
-                            regarding software and implementation options, design and implementation
-                            of architecture and infrastructure, ...
-                        </li>
-                        <li>
-                            As certified project managers we support our customers and partners in
-                            any aspect of project and portfolio management.
-                        </li>
-                    </ul>
-                </div>
-                <div class="pillar pillar-projects">
-                    <img src={rocketIcon} alt="" />
-                    <h3>Projects, Activities & Interests</h3>
-                    <ul>
-                        <li>
-                            <a href="{base}/anyblock-analytics/"
-                                >Anyblock Analytics GmbH (Crypto Analytics)</a
-                            >
-                        </li>
-                        <li>Digital Virtues Media Services</li>
-                        <li>
-                            <a href="https://www.dielichtmatrosen.de/"
-                                >Die Lichtmatrosen (Photography)</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://peachandlime.shop/"
-                                >Peach & Lime (Business- & IT-Consulting)</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://www.deine-zweisamkeit.de/"
-                                >Deine Zweisamkeit (Business-, AI- & IT-Consulting)</a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://finomet.de/">Finomet (Business- & IT-Consulting)</a>
-                        </li>
-                        <li>More to come, watch this space</li>
-                        <!-- <li>Oli</li> -->
-                        <!-- <li>Blockchain Founders</li> -->
-                        <!-- <li>Valid</li> -->
-                        <!-- <li>Creator Cartel</li> -->
-                        <!-- <li>Curator</li> -->
-                        <!-- <li>Knowledge Extension</li> -->
-                        <!-- <li>Proxy Manager</li> -->
-                    </ul>
-                </div>
-                <div class=" pillar-img">
-                    <img src={pillarImg} alt="" />
+        <section id="vision">
+            <div class="container center">
+                <h2>Vision</h2>
+                <p>
+                    To be a driving force in digital transformation by empowering exceptional
+                    entrepreneurs, creating sustainable digital value, and fostering an ecosystem of
+                    innovation through meaningful relationships and hands-on engagement.
+                </p>
+            </div>
+        </section>
+
+        <section id="values">
+            <div class="container">
+                <h2>Values</h2>
+                <dl>
+                    <dt>Digital Transformation</dt>
+                    <dd>
+                        We embrace and drive the evolution of digital technologies and business
+                        models.
+                    </dd>
+                    <dt>Digital Sustainability ("Digitale Erneuerbarkeit")</dt>
+                    <dd>
+                        We create and support digital solutions that are sustainable and renewable.
+                    </dd>
+                    <dt>Digital Innovation</dt>
+                    <dd>We constantly seek and develop new digital approaches and solutions.</dd>
+                    <dt>Personal Engagement</dt>
+                    <dd>
+                        We build genuine, long-term relationships and engage on a personal level
+                        with founders and partners.
+                    </dd>
+                    <dt>Hands-on Value Creation</dt>
+                    <dd>
+                        We provide real value by actively contributing our expertise and resources,
+                        increasing efficiency and effectiveness for our partners.
+                    </dd>
+                    <dt>Adaptability</dt>
+                    <dd>
+                        We value teams and individuals who can adapt to changing challenges in the
+                        digital landscape.
+                    </dd>
+                    <dt>Knowledge Sharing</dt>
+                    <dd>
+                        We share our expertise through consulting, mentoring, and strategic support
+                        for entrepreneurs and startup teams.
+                    </dd>
+                </dl>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="container">
+                <h2>Team</h2>
+                <div class="team-info">
+                    <Person
+                        firstName="Peter"
+                        lastName="Eulberg"
+                        description="Successful blockchain startup founder with executive leadership experience, specializing in organizational development, portfolio management, and expertise spanning entrepreneurship, web3, technology, and business process analysis."
+                        role="CEO"
+                        company="Digital Virtues GmbH"
+                        companyUrl="https://digitalvirtues.com/"
+                        img="peter-eulberg.png"
+                        homepage="https://www.saschagoebel.com/"
+                        linkedin="https://www.linkedin.com/in/eulberg/"
+                    />
+                    <Person
+                        firstName="Sascha"
+                        lastName="Göbel"
+                        description="Data Wrangler, AI Whisperer, Code Monkey, Investor, Serial Entrepreneur, Helpdesk, Meme Connoisseur. I do stuff with computers."
+                        role="CTO"
+                        company="Digital Virtues GmbH"
+                        companyUrl="https://digitalvirtues.com/"
+                        img="sascha-goebel.png"
+                        homepage="https://www.saschagoebel.com/"
+                        linkedin="https://www.linkedin.com/in/saschagoebel/"
+                    />
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="references">
-        <h2>Testimonials</h2>
-        <div class="sliders">
-            <div class="testimonials">
-                {#each data.testimonials as testimonial}
-                    <testimonial.default id="testimonial-{testimonial.slug}" />
-                {/each}
+        <section id="pillars">
+            <div class="container">
+                <h2>Pillars of Operation</h2>
+                <div class="pillars">
+                    <div class="pillar pillar-invest">
+                        <img src={euroIcon} alt="" />
+                        <h3>Venture Capital / Business Angel Activities</h3>
+                        <ul>
+                            <li>
+                                We invest in strong founder teams with exceptional know how and
+                                skills that are able to adapt to changing challenges
+                            </li>
+                            <li>
+                                Our investments have superb access or at least a unique angle into
+                                their markets
+                            </li>
+                            <li>
+                                We love to engange on a personal level and very hands-on. Depending
+                                on the individual preferences and needs of the founders we often
+                                have 1-2 calls a month and at least one yearly workshop. We are
+                                providing real value i.e. increasing efficiency and effectiveness
+                                significantly as well as adding raw productivity output if needed.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pillar pillar-consult">
+                        <img src={profileIcon} alt="" />
+                        <h3>Consulting</h3>
+                        <p>
+                            Our consulting activities are very diverse reflecting our personal
+                            expertise and experiences. They are mainly centered around personal,
+                            business and strategic development. Lately we cover mostly
+                            entrepreneural topics like scoping, sales and HR as well as specific
+                            questions in crypto, software or infrastructre projects.
+                        </p>
+                        Following a few examples:
+                        <ul>
+                            <li>Mentoring of students and (future) founders</li>
+                            <li>
+                                Supporting entrepreneurs and startup teams on a monthly basis
+                                regarding prioritization, growth, HR and a wide range of other
+                                questions and needs as they arise.
+                            </li>
+                            <li>IT- process design and advisory</li>
+                            <li>
+                                Information technology consulting, i.e. make or buy, decision
+                                support regarding software and implementation options, design and
+                                implementation of architecture and infrastructure, ...
+                            </li>
+                            <li>
+                                As certified project managers we support our customers and partners
+                                in any aspect of project and portfolio management.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pillar pillar-projects">
+                        <img src={rocketIcon} alt="" />
+                        <h3>Projects, Activities & Interests</h3>
+                        <ul>
+                            <li>
+                                <a href="{base}/anyblock-analytics/"
+                                    >Anyblock Analytics GmbH (Crypto Analytics)</a
+                                >
+                            </li>
+                            <li>Digital Virtues Media Services</li>
+                            <li>
+                                <a href="https://www.dielichtmatrosen.de/"
+                                    >Die Lichtmatrosen (Photography)</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://peachandlime.shop/"
+                                    >Peach & Lime (Business- & IT-Consulting)</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://www.deine-zweisamkeit.de/"
+                                    >Deine Zweisamkeit (Business-, AI- & IT-Consulting)</a
+                                >
+                            </li>
+                            <li>
+                                <a href="https://finomet.de/">Finomet (Business- & IT-Consulting)</a
+                                >
+                            </li>
+                            <li>More to come, watch this space</li>
+                            <!-- <li>Oli</li> -->
+                            <!-- <li>Blockchain Founders</li> -->
+                            <!-- <li>Valid</li> -->
+                            <!-- <li>Creator Cartel</li> -->
+                            <!-- <li>Curator</li> -->
+                            <!-- <li>Knowledge Extension</li> -->
+                            <!-- <li>Proxy Manager</li> -->
+                        </ul>
+                    </div>
+                    <div class=" pillar-img">
+                        <img src={pillarImg} alt="" />
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section id="references">
+            <h2>Testimonials</h2>
+            <div class="sliders">
+                <div class="testimonials">
+                    {#each data.testimonials as testimonial}
+                        <testimonial.default id="testimonial-{testimonial.slug}" />
+                    {/each}
+                </div>
+            </div>
+        </section>
+    </div>
     <section id="timeline">
         <div class="container">
             <h2>News / Timeline</h2>
-            {#each data.news as news}
+            <!-- {#each data.news as news}
                 <div class="timeline-year">
                     <h3>{news[0]}</h3>
                     {#each news[1] as item}
                         <item.default id="news-item-{item.slug}" />
                     {/each}
                 </div>
-            {/each}
+            {/each} -->
+            <Timeline />
         </div>
     </section>
 </div>
@@ -273,7 +280,6 @@
             position: relative;
             text-align: center;
             padding: 1em 0.5em;
-            
         }
 
         .image-ani {
@@ -335,7 +341,7 @@
         p {
             width: 100%;
             text-align: center;
-            
+
             font-size: 1.25em;
             max-width: 900px;
         }
@@ -357,7 +363,6 @@
                 padding-left: 1em;
                 line-height: 1.5;
                 margin-bottom: 1.5em;
-                
             }
         }
     }
@@ -394,7 +399,6 @@
 
                 h3,
                 p {
-                    
                 }
 
                 h3 {
@@ -465,10 +469,10 @@
     /* References Section */
     section#references {
         .sliders {
-        width: 100%;
-           display: flex;
-           justify-content: center;
-           align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
             position: relative;
             margin: 0 auto;
@@ -496,6 +500,12 @@
 
     /* Timeline Section */
     section#timeline {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .timeline-year {
             text-align: left;
 
@@ -615,7 +625,11 @@
         --i: 35deg;
 
         background-color: var(--color-blue-dark);
-        background: url('$lib/assets/img/res/gradient-bg.jpg') no-repeat center center fixed;
+
+        .contain-bg{
+        background: url('$lib/assets/img/res/gradient-bg.jpg') no-repeat top center fixed;
+
+        }
         //     background:
         //         radial-gradient(
         //             ellipse at var(--a) var(--b),
